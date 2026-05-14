@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Ana Lima | Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:        #C9A84C;
+      --gold-light:  #E2C47A;
+      --gold-dim:    rgba(201, 168, 76, 0.15);
+      --charcoal:    #2B2B2B;
+      --charcoal-2:  #333333;
+      --charcoal-3:  #3E3E3E;
+      --surface:     #3A3A3A;
+      --text-primary:#F0EDE6;
+      --text-muted:  #B0A898;
+      --white:       #FFFFFF;
+      --radius:      8px;
+      --transition:  0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--charcoal);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.25;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 96px 0; }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .gold-line {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 24px 0;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(35, 35, 35, 0.97);
+      padding: 14px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--text-primary);
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      border-radius: var(--radius);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: var(--transition);
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%),
+        linear-gradient(135deg, #222222 0%, #2B2B2B 50%, #303030 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 5vw, 58px);
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      background: var(--gold);
+      color: var(--charcoal);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: var(--radius);
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border: 1.5px solid var(--charcoal-3);
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 14px;
+      border-radius: var(--radius);
+      transition: border-color var(--transition), color var(--transition), transform var(--transition);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--gold);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: var(--surface);
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(20%);
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      gap: 12px;
+      background: linear-gradient(160deg, #3A3A3A, #2E2E2E);
+    }
+
+    .hero-image-placeholder svg {
+      opacity: 0.3;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 24px;
+      left: -20px;
+      background: var(--charcoal-2);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .badge-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gold-dim);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .badge-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--text-primary);
+    }
+
+    .badge-text span {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-deco {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 50%;
+    }
+
+    /* ===== SOBRE ===== */
+    #sobre {
+      background: var(--charcoal-2);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .sobre-image-wrap {
+      position: relative;
+    }
+
+    .sobre-image-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      background: var(--surface);
+    }
+
+    .sobre-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sobre-quote {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-weight: 600;
+      max-width: 220px;
+      line-height: 1.5;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    .sobre-quote::before {
+      content: '"';
+      font-size: 40px;
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 8px;
+      opacity: 0.4;
+    }
+
+    .sobre-info p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 15.5px;
+    }
+
+    .sobre-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .credential-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--charcoal-3);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--gold);
+    }
+
+    .credential-item span {
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    /* ===== ÁREAS ===== */
+    #areas {
+      background: var(--charcoal);
+    }
+
+    .areas-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+    }
+
+    .areas-header .gold-line { margin: 24px auto; }
+
+    .areas-header .section-subtitle { margin: 0 auto; }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .area-card {
+      background: var(--charcoal-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+    }
+
+    .area-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    }
+
+    .area-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--gold-dim);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .area-card h3 {
+      font-size: 18px;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .area-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 18px;
+      transition: gap var(--transition);
+    }
+
+    .area-link:hover { gap: 10px; }
+
+    /* ===== DEPOIMENTOS ===== */
+    #depoimentos {
+      background: var(--charcoal-2);
+    }
+
+    .dep-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .dep-header .gold-line { margin: 20px auto; }
+
+    .dep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .dep-card {
+      background: var(--charcoal-3);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 28px 26px;
+    }
+
+    .dep-stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .dep-text {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .dep-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dep-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .dep-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .dep-role {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CONTATO ===== */
+    #contato {
+      background: var(--charcoal);
+    }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .contato-info h2 { margin-bottom: 8px; }
+
+    .contato-info .section-subtitle { margin-bottom: 40px; }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold-dim);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text span {
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+
+    .wpp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 36px;
+      padding: 15px 28px;
+      background: #25D366;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: var(--radius);
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .wpp-btn:hover {
+      background: #1ebe59;
+      transform: translateY(-2px);
+    }
+
+    /* Form */
+    .contact-form {
+      background: var(--charcoal-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 40px 36px;
+    }
+
+    .contact-form h3 {
+      font-size: 22px;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--charcoal-3);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text-primary);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+
+    .form-group select option {
+      background: var(--charcoal-3);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--gold);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1E1E1E;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--text-primary);
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: rgba(30,30,30,0.98);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      backdrop-filter: blur(8px);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--text-primary);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:hover { color: var(--gold); }
+
+    .mobile-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .sobre-grid,
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .hero-image-wrap { order: -1; max-width: 380px; margin: 0 auto; }
+
+      .areas-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .dep-grid { grid-template-columns: 1fr; }
+
+      .nav-links, .nav-cta { display: none; }
+
+      .nav-hamburger { display: flex; }
+
+      .hero-stats { gap: 20px; }
+
+      .sobre-quote { position: static; margin-top: 20px; max-width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 64px 0; }
+      .areas-grid { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .contact-form { padding: 28px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">Ana <span>Lima</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="#contato" class="nav-cta">Fale Conosco</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
+    <a href="#sobre" class="mobile-link">Sobre</a>
+    <a href="#areas" class="mobile-link">Áreas de Atuação</a>
+    <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+    <a href="#contato" class="mobile-link">Contato</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">OAB/SP 000.000</div>
+          <h1 class="hero-title">
+            Direito com<br/>
+            <em>humanidade</em><br/>
+            e precisão.
+          </h1>
+          <p class="hero-desc">
+            Atendimento personalizado para pessoas e empresas que buscam soluções jurídicas seguras, transparentes e eficazes.
+          </p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn-primary">
+              &#128172; Consulta Gratuita
+            </a>
+            <a href="#areas" class="btn-outline">
+              Ver Especialidades &#8594;
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">anos de experiência</div>
+            </div>
+            <div>
+              <div class="stat-number">500+</div>
+              <div class="stat-label">clientes atendidos</div>
+            </div>
+            <div>
+              <div class="stat-number">98%</div>
+              <div class="stat-label">satisfação</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-deco"></div>
+          <div class="hero-image-frame">
+            <!-- Substitua o src abaixo pela foto real -->
+            <!-- <img src="foto-advogada.jpg" alt="Dra. Ana Lima" /> -->
+            <div class="hero-image-placeholder">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+              <span>Sua foto aqui</span>
+            </div>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-icon">&#9876;</div>
+            <div class="badge-text">
+              <strong>Advocacia especializada</strong>
+              <span>São Paulo • SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-image-wrap">
+          <div class="sobre-image-frame">
+            <!-- <img src="sobre-foto.jpg" alt="Dra. Ana Lima" /> -->
+            <div class="hero-image-placeholder" style="aspect-ratio:3/4">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+              <span>Sua foto aqui</span>
+            </div>
+          </div>
+          <div class="sobre-quote">
+            Cada caso é único. Cada cliente merece atenção plena.
+          </div>
+        </div>
+
+        <div class="sobre-info">
+          <div class="section-label">Sobre mim</div>
+          <h2 class="section-title">Dra. Ana Lima</h2>
+          <div class="gold-line"></div>
+          <p>
+            Advogada com mais de 10 anos de experiência, formada pela Universidade de São Paulo (USP), com especialização em Direito Civil e Família. Acredita que o atendimento humanizado é a base de qualquer relação jurídica de qualidade.
+          </p>
+          <p>
+            Seu escritório foi fundado com a missão de oferecer soluções jurídicas acessíveis e eficientes, respeitando sempre a dignidade e os direitos de cada cliente.
+          </p>
+
+          <div class="sobre-credentials">
+            <div class="credential-item">
+              <span>&#127891; Bacharel em Direito — USP (2013)</span>
+            </div>
+            <div class="credential-item">
+              <span>&#127891; Especialista em Direito Civil — PUC-SP (2015)</span>
+            </div>
+            <div class="credential-item">
+              <span>&#9878; OAB/SP 000.000 — Subseção São Paulo</span>
+            </div>
+            <div class="credential-item">
+              <span>&#128218; Membro do IBDFAM — Instituto Brasileiro de Direito de Família</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS -->
+  <section id="areas" class="section">
+    <div class="container">
+      <div class="areas-header">
+        <div class="section-label">Especialidades</div>
+        <h2 class="section-title">Áreas de Atuação</h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">Atuação focada nas principais demandas jurídicas de pessoas físicas e empresas, com profundidade técnica e cuidado humano.</p>
+      </div>
+
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-icon">&#128106;</div>
+          <h3>Direito de Família</h3>
+          <p>Divórcio, guarda de filhos, pensão alimentícia, inventário e partilha de bens com cuidado e discrição.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+        <div class="area-card">
+          <div class="area-icon">&#127968;</div>
+          <h3>Direito Imobiliário</h3>
+          <p>Contratos de compra e venda, locação, usucapião, regularização de imóveis e disputas condominiais.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+        <div class="area-card">
+          <div class="area-icon">&#128196;</div>
+          <h3>Direito do Trabalho</h3>
+          <p>Rescisões, horas extras, assédio moral, acordos trabalhistas e representação em reclamações.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+        <div class="area-card">
+          <div class="area-icon">&#128184;</div>
+          <h3>Direito do Consumidor</h3>
+          <p>Cobranças indevidas, dano moral, revisão de contratos e defesa contra práticas abusivas.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+        <div class="area-card">
+          <div class="area-icon">&#128209;</div>
+          <h3>Direito Contratual</h3>
+          <p>Elaboração, revisão e análise de contratos para pessoas físicas e jurídicas de todos os portes.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+        <div class="area-card">
+          <div class="area-icon">&#128230;</div>
+          <h3>Inventário e Herança</h3>
+          <p>Processo de inventário judicial e extrajudicial, planejamento sucessório e testamentos.</p>
+          <span class="area-link">Saiba mais &#8594;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <div class="dep-header">
+        <div class="section-label">Depoimentos</div>
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="dep-grid">
+        <div class="dep-card">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"A Dra. Ana foi fundamental no meu processo de divórcio. Além de extremamente competente, foi empática e me manteve informado em cada etapa. Recomendo de olhos fechados."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">M</div>
+            <div>
+              <div class="dep-name">Marcos Souza</div>
+              <div class="dep-role">Direito de Família</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"Resolveu minha questão trabalhista com rapidez e eficiência. Fui muito bem orientada desde a primeira consulta. Escritório sério e de confiança."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">C</div>
+            <div>
+              <div class="dep-name">Carla Mendes</div>
+              <div class="dep-role">Direito Trabalhista</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">"Contratei para revisar um contrato imobiliário e evitei um prejuízo enorme. Profissional detalhista, honesta e que realmente se importa com o cliente."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">R</div>
+            <div>
+              <div class="dep-name">Roberto Alves</div>
+              <div class="dep-role">Direito Imobiliário</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-info">
+          <div class="section-label">Fale Conosco</div>
+          <h2 class="section-title">Vamos conversar sobre o seu caso</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle">A primeira consulta é gratuita. Entre em contato pelo formulário, e-mail ou WhatsApp.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">&#128205;</div>
+              <div class="contact-item-text">
+                <strong>Endereço</strong>
+                <span>Av. Paulista, 1000 — Sala 210<br/>Bela Vista, São Paulo — SP</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">&#128222;</div>
+              <div class="contact-item-text">
+                <strong>Telefone</strong>
+                <span>(11) 9 9999-9999</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">&#9993;</div>
+              <div class="contact-item-text">
+                <strong>E-mail</strong>
+                <span>contato@analima.adv.br</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">&#128336;</div>
+              <div class="contact-item-text">
+                <strong>Horário</strong>
+                <span>Seg–Sex: 9h às 18h</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="wpp-btn">
+            &#128172; Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-form">
+          <h3>Envie sua mensagem</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" placeholder="(11) 9 9999-9999" />
+            </div>
+            <div class="form-group">
+              <label for="area">Área de interesse</label>
+              <select id="area">
+                <option value="">Selecione uma área</option>
+                <option>Direito de Família</option>
+                <option>Direito Imobiliário</option>
+                <option>Direito Trabalhista</option>
+                <option>Direito do Consumidor</option>
+                <option>Direito Contratual</option>
+                <option>Inventário e Herança</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" placeholder="Descreva brevemente seu caso..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">Ana <span>Lima</span> Advocacia</div>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="footer-copy">© 2025 Ana Lima Advocacia. OAB/SP 000.000</div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // Form submit
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'Mensagem enviada! ✓';
+      btn.style.background = '#4CAF50';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Enviar Mensagem';
+        btn.style.background = '';
+        btn.disabled = false;
+        this.reset();
+      }, 3000);
+    });
+
+    // Intersection observer for fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.area-card, .dep-card, .credential-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
