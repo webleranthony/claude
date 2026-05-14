@@ -183,6 +183,149 @@
     .badge-text strong { display: block; font-size: 13px; color: var(--text); }
     .badge-text span { font-size: 11px; color: var(--muted); }
 
+    /* ===== TRAJETÓRIA ===== */
+    #trajetoria { background: var(--bg-2); }
+
+    .traj-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+    .traj-header .line { margin: 18px auto; }
+
+    .traj-numbers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: var(--bg-3);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 56px;
+    }
+
+    .traj-num-card {
+      background: var(--bg-2);
+      padding: 36px 28px;
+      text-align: center;
+      transition: background var(--ease);
+    }
+    .traj-num-card:hover { background: var(--bg-3); }
+
+    .traj-big-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 60px);
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .traj-num-label {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .traj-num-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .traj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .traj-card {
+      background: var(--bg-3);
+      border-radius: 12px;
+      padding: 28px 28px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .traj-card h3 {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .traj-bar-wrap { display: flex; flex-direction: column; gap: 10px; }
+
+    .traj-bar-item { display: flex; flex-direction: column; gap: 4px; }
+
+    .traj-bar-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .traj-bar-track {
+      height: 6px;
+      background: var(--bg);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .traj-bar-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 99px;
+      transition: width 1.2s ease;
+    }
+
+    .traj-timeline {
+      display: flex;
+      gap: 0;
+      position: relative;
+      margin-top: 16px;
+    }
+
+    .traj-timeline::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--bg-3);
+    }
+
+    .traj-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .traj-step-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-2);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      font-size: 15px;
+    }
+
+    .traj-step-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .traj-step-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      padding: 0 4px;
+    }
+
     /* ===== SOBRE ===== */
     #sobre { background: var(--bg-2); }
     .sobre-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center; }
@@ -375,8 +518,8 @@
       <a href="#hero" class="nav-logo">Anthony <span>Webler</span></a>
       <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#areas">Áreas</a></li>
-        <li><a href="#atendimento">Atendimento</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="nav-cta">WhatsApp</a>
@@ -448,6 +591,109 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section id="trajetoria" class="section">
+    <div class="container">
+
+      <div class="traj-header">
+        <div class="label">Nossa Trajetória</div>
+        <h2 class="title">Experiência comprovada em números</h2>
+        <div class="line line-center"></div>
+        <p class="subtitle">Desde 2017 no meio jurídico, o Dr. Anthony acumulou uma trajetória sólida de atuação em Rondônia e Amazonas, com centenas de processos conduzidos com dedicação e técnica.</p>
+      </div>
+
+      <!-- NÚMEROS PRINCIPAIS -->
+      <div class="traj-numbers">
+        <div class="traj-num-card">
+          <div class="traj-big-num" data-target="914">0</div>
+          <div class="traj-num-label">Processos</div>
+          <div class="traj-num-sub">registrados no Jusbrasil</div>
+        </div>
+        <div class="traj-num-card">
+          <div class="traj-big-num" data-target="827">0</div>
+          <div class="traj-num-label">Em Rondônia</div>
+          <div class="traj-num-sub">TJRO</div>
+        </div>
+        <div class="traj-num-card">
+          <div class="traj-big-num" data-target="39">0</div>
+          <div class="traj-num-label">No Amazonas</div>
+          <div class="traj-num-sub">TJAM</div>
+        </div>
+        <div class="traj-num-card">
+          <div class="traj-big-num">8+</div>
+          <div class="traj-num-label">Anos de experiência</div>
+          <div class="traj-num-sub">no meio jurídico</div>
+        </div>
+      </div>
+
+      <!-- BARRAS E CLIENTES -->
+      <div class="traj-grid">
+        <div class="traj-card">
+          <h3>📍 Principais municípios atendidos</h3>
+          <div class="traj-bar-wrap">
+            <div class="traj-bar-item">
+              <div class="traj-bar-top"><span>Theobroma / RO</span><span>460 processos</span></div>
+              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="100%"></div></div>
+            </div>
+            <div class="traj-bar-item">
+              <div class="traj-bar-top"><span>São Francisco do Guaporé / RO</span><span>101 processos</span></div>
+              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="22%"></div></div>
+            </div>
+            <div class="traj-bar-item">
+              <div class="traj-bar-top"><span>Demais municípios de RO e AM</span><span>353 processos</span></div>
+              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="76%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="traj-card">
+          <h3>⚖️ Distribuição por polo</h3>
+          <div class="traj-bar-wrap">
+            <div class="traj-bar-item">
+              <div class="traj-bar-top"><span>Como Advogado</span><span>&gt; 99%</span></div>
+              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="99%"></div></div>
+            </div>
+            <div class="traj-bar-item">
+              <div class="traj-bar-top"><span>Polo Ativo</span><span>&lt; 1%</span></div>
+              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="1%"></div></div>
+            </div>
+          </div>
+          <p style="margin-top:20px; font-size:13px; color:var(--muted); line-height:1.7;">
+            Atuação quase exclusiva como advogado — representando clientes em ações contra o INSS, municípios e demais partes em todo o espectro do Direito Previdenciário e do Servidor Público.
+          </p>
+        </div>
+      </div>
+
+      <!-- LINHA DO TEMPO -->
+      <div class="traj-card" style="border-left: none; border-top: 3px solid var(--gold); border-radius: 12px; padding: 32px 36px;">
+        <h3 style="text-align:center; justify-content:center; margin-bottom:32px;">🗓️ Uma trajetória construída com propósito</h3>
+        <div class="traj-timeline">
+          <div class="traj-step">
+            <div class="traj-step-dot">📚</div>
+            <div class="traj-step-year">2017</div>
+            <div class="traj-step-desc">Início no meio jurídico, já atuando com servidores públicos</div>
+          </div>
+          <div class="traj-step">
+            <div class="traj-step-dot">🎓</div>
+            <div class="traj-step-year">2020</div>
+            <div class="traj-step-desc">Formatura em Direito pela UNIR — Cacoal/RO. Inscrição na OAB/RO</div>
+          </div>
+          <div class="traj-step">
+            <div class="traj-step-dot">⚖️</div>
+            <div class="traj-step-year">2021</div>
+            <div class="traj-step-desc">Expansão para o Amazonas. Inscrição na OAB/AM</div>
+          </div>
+          <div class="traj-step">
+            <div class="traj-step-dot">🏛️</div>
+            <div class="traj-step-year">2025</div>
+            <div class="traj-step-desc">914+ processos. Pós em RPPS, Tributário, BPC e Incapacidade</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -692,8 +938,8 @@
       <div class="footer-logo">Anthony <span>Webler</span> Advocacia</div>
       <ul class="footer-links">
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#areas">Áreas</a></li>
-        <li><a href="#atendimento">Atendimento</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
       <div class="footer-copy">© 2025 · OAB/RO 10.953 · OAB/AM A2232</div>
@@ -724,6 +970,33 @@
         this.reset();
       }, 3000);
     });
+
+    // Contador animado
+    function animateCount(el, target, duration = 1800) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target.toLocaleString('pt-BR') + '+'; clearInterval(timer); }
+        else el.textContent = Math.floor(start).toLocaleString('pt-BR');
+      }, 16);
+    }
+
+    // Anima barras
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.querySelectorAll('.traj-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+        e.target.querySelectorAll('.traj-big-num[data-target]').forEach(num => {
+          animateCount(num, parseInt(num.dataset.target));
+        });
+        barObs.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('#trajetoria').forEach(el => barObs.observe(el));
 
     // Fade-in on scroll
     const obs = new IntersectionObserver(entries => {
