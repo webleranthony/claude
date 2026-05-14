@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Anthony Henrik Webler | Advogado</title>
-  <meta name="description" content="Advogado especialista em INSS e Direito do Servidor Público. OAB/RO 10.953 | OAB/AM A2232. Atendimento em todo o Brasil." />
+  <title>Dr. Anthony Henrik Webler | Advogado Previdenciário e do Servidor Público</title>
+  <meta name="description" content="Advogado especialista em ações contra o INSS e defesa do servidor público. OAB/RO 10.953 | OAB/AM A2232. Atendimento em todo o Brasil. Base em Cacoal/RO." />
+  <meta name="keywords" content="advogado INSS Cacoal, advogado servidor público Rondônia, aposentadoria por incapacidade, BPC LOAS, revisão de benefício INSS, PAD servidor público, advogado previdenciário RO, Anthony Webler advogado" />
+  <meta name="author" content="Dr. Anthony Henrik Webler" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://anthonywebler.adv.br/" />
+
+  <!-- Open Graph (WhatsApp, Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dr. Anthony Henrik Webler | Advogado Previdenciário" />
+  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 914+ processos. Atendimento em todo o Brasil." />
+  <meta property="og:image" content="foto-hero.jpeg" />
+  <meta property="og:url" content="https://anthonywebler.adv.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr. Anthony Henrik Webler | Advogado" />
+  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 914+ processos. Atendimento em todo o Brasil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -469,6 +486,60 @@
     }
     .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
 
+    /* ===== DEPOIMENTOS ===== */
+    #depoimentos { background: var(--bg-2); }
+
+    .dep-header { text-align: center; margin-bottom: 48px; }
+    .dep-header .line { margin: 18px auto; }
+
+    .dep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .dep-card {
+      background: var(--bg-3);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 200px;
+      position: relative;
+    }
+
+    .dep-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex: 1;
+      gap: 10px;
+      opacity: 0.4;
+    }
+
+    .dep-placeholder-icon { font-size: 32px; }
+    .dep-placeholder-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    .dep-add-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 32px auto 0;
+      padding: 12px 28px;
+      border: 1.5px dashed rgba(42,95,191,0.4);
+      border-radius: var(--radius);
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: default;
+      width: fit-content;
+    }
+
+    @media (max-width: 900px) {
+      .dep-grid { grid-template-columns: 1fr; }
+    }
+
     /* ===== FOOTER ===== */
     footer {
       background: #1C1C1C; padding: 40px 0;
@@ -828,6 +899,41 @@
     </div>
   </section>
 
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <div class="dep-header">
+        <div class="label">Depoimentos</div>
+        <h2 class="title">O que dizem nossos clientes</h2>
+        <div class="line line-center"></div>
+        <p class="subtitle" style="margin: 0 auto;">Em breve, avaliações reais de clientes atendidos em todo o Brasil.</p>
+      </div>
+
+      <div class="dep-grid">
+        <div class="dep-card">
+          <div class="dep-placeholder">
+            <div class="dep-placeholder-icon">💬</div>
+            <div class="dep-placeholder-text">Depoimento em breve</div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-placeholder">
+            <div class="dep-placeholder-icon">💬</div>
+            <div class="dep-placeholder-text">Depoimento em breve</div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-placeholder">
+            <div class="dep-placeholder-icon">💬</div>
+            <div class="dep-placeholder-text">Depoimento em breve</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dep-add-btn">⭐ Espaço reservado para avaliações de clientes</div>
+    </div>
+  </section>
+
   <!-- CONTATO -->
   <section id="contato" class="section">
     <div class="container">
@@ -871,9 +977,14 @@
             </div>
           </div>
 
-          <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">
-            &#128172; Chamar no WhatsApp
-          </a>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:36px;">
+            <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn" style="margin-top:0;">
+              &#128172; Chamar no WhatsApp
+            </a>
+            <a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 22px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;font-weight:700;font-size:14px;border-radius:var(--radius);transition:opacity 0.3s;text-decoration:none;">
+              📷 Instagram
+            </a>
+          </div>
         </div>
 
         <div class="contact-form">
@@ -924,6 +1035,7 @@
         <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#areas">Áreas</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
       <div class="footer-copy">© 2025 · OAB/RO 10.953 · OAB/AM A2232</div>
     </div>
