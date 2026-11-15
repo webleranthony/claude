@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Anthony Henrik Webler | Advogado Previdenciário e do Servidor Público</title>
-  <meta name="description" content="Advogado especialista em ações contra o INSS e defesa do servidor público. OAB/RO 10.953 | OAB/AM A2232. Atendimento em todo o Brasil. Base em Cacoal/RO." />
-  <meta name="keywords" content="advogado INSS Cacoal, advogado servidor público Rondônia, aposentadoria por incapacidade, BPC LOAS, revisão de benefício INSS, PAD servidor público, advogado previdenciário RO, Anthony Webler advogado" />
+  <title>Dr. Anthony Henrik Webler | Advogado Previdenciário · INSS</title>
+  <meta name="description" content="Advogado previdenciário: aposentadorias, auxílio por incapacidade, auxílio-acidente, pensão por morte, BPC/LOAS e revisões no INSS. OAB/RO 10.953 | OAB/AM A2232. Cacoal/RO, atendimento em todo o Brasil." />
+  <meta name="keywords" content="advogado INSS Cacoal, advogado servidor público Rondônia, aposentadoria por incapacidade, BPC LOAS, revisão de benefício INSS, auxílio-doença negado, auxílio-acidente, aposentadoria rural, pensão por morte, advogado previdenciário RO, Anthony Webler advogado" />
   <meta name="author" content="Dr. Anthony Henrik Webler" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0B1B30" />
@@ -13,13 +13,13 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Dr. Anthony Henrik Webler | Advogado Previdenciário" />
-  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 969 processos. Atendimento em todo o Brasil." />
+  <meta property="og:description" content="Aposentadorias, benefícios por incapacidade, BPC/LOAS e revisões no INSS. 969 processos. Atendimento em todo o Brasil." />
   <meta property="og:image" content="https://www.anthony.adv.br/foto-hero.jpeg" />
   <meta property="og:url" content="https://www.anthony.adv.br/" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dr. Anthony Henrik Webler | Advogado" />
-  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 969 processos. Atendimento em todo o Brasil." />
+  <meta name="twitter:description" content="Advogado previdenciário. 969 processos. Atendimento em todo o Brasil." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -148,7 +148,11 @@
     .creds li span { color: var(--ink-2); white-space: nowrap; }
 
     /* Áreas */
-    .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .area-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
+    .area-secondary { display: flex; gap: 14px; align-items: flex-start; margin-top: 40px; padding: 22px 24px; border: 1px solid var(--line); background: var(--paper-hi); }
+    .area-secondary .ico { color: var(--ink-2); margin-top: 3px; }
+    .area-secondary h4 { font-size: 18px; margin-bottom: 4px; }
+    .area-secondary p { color: var(--ink-2); font-size: 15px; }
     .area-group-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 2px solid var(--navy-900); margin-bottom: 8px; color: var(--navy-900); }
     .area-group-head .ico { width: 26px; height: 26px; color: var(--blue); }
     .area-group-head h3 { font-size: 24px; }
@@ -210,7 +214,7 @@
       .nav-links, .nav .btn { display: none; }
       .hamburger { display: block; }
       .hero { padding-top: 48px; }
-      .hero-grid, .about, .process, .contact, .record, .areas { grid-template-columns: 1fr; gap: 48px; }
+      .hero-grid, .about, .process, .contact, .record, .area-list { grid-template-columns: 1fr; gap: 48px; }
       .hero-text { padding-bottom: 0; }
       .hero-photo { max-width: 420px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
@@ -278,7 +282,7 @@
         <div class="hero-text">
           <p class="hero-name">Dr. Anthony Henrik Webler · Advogado</p>
           <h1>Seus direitos, defendidos com dedicação.</h1>
-          <p class="hero-lead">Ações contra o INSS e defesa de servidores públicos. Escritório em Cacoal/RO, com atendimento presencial e online para todo o Brasil.</p>
+          <p class="hero-lead">Advocacia previdenciária: aposentadorias, benefícios por incapacidade, BPC/LOAS e revisões no INSS. Escritório em Cacoal/RO, com atendimento presencial e online para todo o Brasil.</p>
           <div class="hero-actions">
             <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
             <a href="#areas" class="btn btn-line-light">Áreas de atuação<svg class="ico"><use href="#i-arrow"/></svg></a>
@@ -312,7 +316,7 @@
         <div class="record">
           <div>
             <h3>969 processos, quase todos como advogado</h3>
-            <p>O nome Anthony Henrik Webler aparece em 969 processos, em sua grande maioria como advogado, representando clientes em ações contra o INSS e na defesa de servidores públicos.</p>
+            <p>O nome Anthony Henrik Webler aparece em 969 processos, em sua grande maioria como advogado, representando clientes principalmente em ações previdenciárias contra o INSS.</p>
             <small>Fonte: Jusbrasil</small>
           </div>
           <div>
@@ -330,10 +334,10 @@
         </div>
 
         <div class="timeline">
-          <div class="tl-item"><div class="tl-year">2017</div><p>Início no meio jurídico, já atuando com servidores públicos.</p></div>
+          <div class="tl-item"><div class="tl-year">2017</div><p>Início no meio jurídico, já atuando com aposentadorias e servidores públicos.</p></div>
           <div class="tl-item"><div class="tl-year">2020</div><p>Formatura em Direito pela UNIR, campus Cacoal, e inscrição na OAB/RO.</p></div>
           <div class="tl-item"><div class="tl-year">2021</div><p>Inscrição na OAB/AM e início da atuação no Amazonas.</p></div>
-          <div class="tl-item"><div class="tl-year">Hoje</div><p>969 processos e pós-graduações em RPPS e Direito Tributário.</p></div>
+          <div class="tl-item"><div class="tl-year">Hoje</div><p>969 processos e pós-graduação em Previdência do Regime Próprio (RPPS).</p></div>
         </div>
       </div>
     </section>
@@ -392,21 +396,22 @@
       <div class="container">
         <div class="sec-head">
           <h2>Áreas de atuação</h2>
-          <p>Atuação concentrada em duas frentes: o direito previdenciário e os direitos do servidor público.</p>
+          <p>O foco do escritório é o direito previdenciário: benefícios negados, cortados ou pagos a menor pelo INSS e pelos regimes próprios dos servidores.</p>
         </div>
-        <div class="areas">
-          <div>
-            <div class="area-group-head"><svg class="ico"><use href="#i-file"/></svg><h3>Previdenciário (INSS)</h3></div>
-            <div class="area-item"><h4>Aposentadoria por incapacidade</h4><p>Benefício por invalidez ou incapacidade permanente negado ou cancelado pelo INSS.</p></div>
-            <div class="area-item"><h4>Revisão de benefícios</h4><p>Valores pagos a menor, correção do tempo de contribuição e recálculo de benefícios.</p></div>
-            <div class="area-item"><h4>BPC / LOAS</h4><p>Benefício para idosos e pessoas com deficiência: concessão, revisão e recursos contra indeferimento.</p></div>
-          </div>
-          <div>
-            <div class="area-group-head"><svg class="ico"><use href="#i-landmark"/></svg><h3>Servidor público</h3></div>
-            <div class="area-item"><h4>Processo administrativo disciplinar</h4><p>Defesa em PAD, sindicâncias e processos de demissão.</p></div>
-            <div class="area-item"><h4>Direitos e vencimentos</h4><p>Verbas atrasadas, progressões, promoções, adicionais e equiparações salariais.</p></div>
-            <div class="area-item"><h4>Aposentadoria do servidor</h4><p>Planejamento e concessão pelo regime próprio (RPPS) e revisão de benefícios já concedidos.</p></div>
-          </div>
+        <div class="area-group-head"><svg class="ico"><use href="#i-file"/></svg><h3>Direito previdenciário</h3></div>
+        <div class="area-list">
+          <div class="area-item"><h4>Aposentadoria por incapacidade</h4><p>Benefício por incapacidade permanente negado ou cancelado pelo INSS.</p></div>
+          <div class="area-item"><h4>Auxílio por incapacidade</h4><p>Antigo auxílio-doença: concessão, prorrogação e restabelecimento após corte.</p></div>
+          <div class="area-item"><h4>Auxílio-acidente</h4><p>Indenização mensal para quem ficou com sequela que reduz a capacidade de trabalho.</p></div>
+          <div class="area-item"><h4>Aposentadoria rural</h4><p>Trabalhador rural e segurado especial, com comprovação da atividade no campo.</p></div>
+          <div class="area-item"><h4>Pensão por morte</h4><p>Concessão e revisão do benefício para os dependentes do segurado falecido.</p></div>
+          <div class="area-item"><h4>BPC / LOAS</h4><p>Benefício para idosos e pessoas com deficiência: concessão, revisão e recursos contra indeferimento.</p></div>
+          <div class="area-item"><h4>Revisão de benefícios</h4><p>Valores pagos a menor, correção do tempo de contribuição e recálculo de benefícios.</p></div>
+          <div class="area-item"><h4>Aposentadoria do servidor (RPPS)</h4><p>Planejamento e concessão pelo regime próprio e revisão de aposentadorias já concedidas.</p></div>
+        </div>
+        <div class="area-secondary">
+          <svg class="ico"><use href="#i-landmark"/></svg>
+          <div><h4>Também atuamos: servidor público</h4><p>Cobrança de verbas atrasadas, progressões, promoções, adicionais e equiparações salariais.</p></div>
         </div>
       </div>
     </section>
@@ -415,7 +420,7 @@
       <div class="container band-inner">
         <div>
           <h3>Teve o benefício negado ou cortado pelo INSS?</h3>
-          <p>Ou é servidor e está respondendo a um PAD? Fale agora com o Dr. Anthony.</p>
+          <p>Aposentadoria, auxílio por incapacidade, BPC/LOAS ou revisão: fale agora com o Dr. Anthony.</p>
         </div>
         <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
@@ -477,12 +482,15 @@
             <label for="area">Assunto</label>
             <select id="area">
               <option value="">Selecione</option>
-              <option>Aposentadoria por incapacidade (INSS)</option>
-              <option>Revisão de benefício (INSS)</option>
+              <option>Aposentadoria por incapacidade</option>
+              <option>Auxílio por incapacidade (auxílio-doença)</option>
+              <option>Auxílio-acidente</option>
+              <option>Aposentadoria rural</option>
+              <option>Pensão por morte</option>
               <option>BPC / LOAS</option>
-              <option>Processo administrativo disciplinar (PAD)</option>
-              <option>Direitos e vencimentos do servidor</option>
+              <option>Revisão de benefício</option>
               <option>Aposentadoria do servidor (RPPS)</option>
+              <option>Direitos e vencimentos do servidor</option>
               <option>Outro assunto</option>
             </select>
           </div>
@@ -498,7 +506,7 @@
       <div class="foot">
         <div>
           <div class="brand"><strong>Anthony Webler</strong><span>Advocacia</span></div>
-          <p>Direito previdenciário e do servidor público.<br/>OAB/RO 10.953 · OAB/AM A2232</p>
+          <p>Advocacia previdenciária.<br/>OAB/RO 10.953 · OAB/AM A2232</p>
         </div>
         <div>
           <h4>Navegação</h4>
