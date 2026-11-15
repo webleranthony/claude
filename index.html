@@ -8,1200 +8,544 @@
   <meta name="keywords" content="advogado INSS Cacoal, advogado servidor público Rondônia, aposentadoria por incapacidade, BPC LOAS, revisão de benefício INSS, PAD servidor público, advogado previdenciário RO, Anthony Webler advogado" />
   <meta name="author" content="Dr. Anthony Henrik Webler" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://anthony.adv.br/" />
+  <meta name="theme-color" content="#0B1B30" />
+  <link rel="canonical" href="https://www.anthony.adv.br/" />
 
-  <!-- Open Graph (WhatsApp, Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Dr. Anthony Henrik Webler | Advogado Previdenciário" />
-  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 969+ processos. Atendimento em todo o Brasil." />
-  <meta property="og:image" content="https://anthony.adv.br/foto-hero.jpeg" />
-  <meta property="og:url" content="https://anthony.adv.br/" />
+  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 969 processos. Atendimento em todo o Brasil." />
+  <meta property="og:image" content="https://www.anthony.adv.br/foto-hero.jpeg" />
+  <meta property="og:url" content="https://www.anthony.adv.br/" />
   <meta property="og:locale" content="pt_BR" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dr. Anthony Henrik Webler | Advogado" />
-  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 969+ processos. Atendimento em todo o Brasil." />
+  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 969 processos. Atendimento em todo o Brasil." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --gold:       #2A5FBF;
-      --gold-light: #4A7FDF;
-      --gold-dim:   rgba(42,95,191,0.13);
-      --bg:         #292929;
-      --bg-2:       #313131;
-      --bg-3:       #3A3A3A;
-      --surface:    #404040;
-      --text:       #EDE9E1;
-      --muted:      #A89F92;
-      --radius:     8px;
-      --ease:       0.3s ease;
+      --navy-900: #0B1B30;
+      --navy-800: #12263F;
+      --blue:     #1F4E9C;
+      --blue-dk:  #173E7D;
+      --paper:    #F4F1EA;
+      --paper-hi: #FBFAF6;
+      --ink:      #14202E;
+      --ink-2:    #4A5563;
+      --line:     #D8D1C3;
+      --on-navy:  #F2EFE9;
+      --on-navy-2:#AEB9C8;
+      --wa:       #1E9E52;
+      --wa-dk:    #178544;
+      --serif: 'Source Serif 4', Georgia, serif;
+      --sans:  'Public Sans', system-ui, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body { font-family: var(--sans); background: var(--paper-hi); color: var(--ink); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .bg-paper { background: var(--paper); }
+    .ico { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .ico-fill { fill: currentColor; stroke: none; }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 100px 0; }
+    .sec-head { max-width: 680px; margin-bottom: 56px; }
+    .sec-head h2 { font-size: clamp(30px, 3.6vw, 44px); margin-bottom: 16px; }
+    .sec-head p { color: var(--ink-2); font-size: 18px; }
 
-    .label {
-      font-family: 'Inter', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 4px; font-weight: 600; font-size: 15px; transition: background .2s, border-color .2s, color .2s; border: 1px solid transparent; cursor: pointer; font-family: var(--sans); }
+    .btn .ico { width: 18px; height: 18px; }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: var(--wa-dk); }
+    .btn-line-light { border-color: rgba(242,239,233,.4); color: var(--on-navy); }
+    .btn-line-light:hover { border-color: var(--on-navy); }
+    .btn-line { border-color: var(--ink); color: var(--ink); }
+    .btn-line:hover { background: var(--ink); color: var(--paper-hi); }
 
-    .title { font-size: clamp(28px, 4vw, 42px); color: var(--text); margin-bottom: 16px; }
-    .subtitle { font-size: 15.5px; color: var(--muted); line-height: 1.85; max-width: 560px; }
+    /* Header */
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy-900); border-bottom: 1px solid rgba(255,255,255,.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .brand { display: flex; flex-direction: column; line-height: 1.1; color: var(--on-navy); }
+    .brand strong { font-family: var(--serif); font-weight: 600; font-size: 21px; }
+    .brand span { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--on-navy-2); margin-top: 3px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--on-navy-2); font-size: 15px; transition: color .2s; }
+    .nav-links a:hover { color: var(--on-navy); }
+    .nav .btn { padding: 10px 18px; font-size: 14px; }
+    .hamburger { display: none; background: none; border: 0; color: var(--on-navy); cursor: pointer; padding: 8px; }
+    .hamburger .ico { width: 26px; height: 26px; }
+    .mobile-menu { display: none; background: var(--navy-900); border-top: 1px solid rgba(255,255,255,.08); padding: 8px 24px 24px; }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: var(--on-navy); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 17px; }
 
-    .line { width: 44px; height: 2px; background: var(--gold); margin: 22px 0; }
-    .line-center { margin: 22px auto; }
+    /* Hero */
+    .hero { background: var(--navy-900); color: var(--on-navy); padding: 72px 0 0; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: end; }
+    .hero-text { padding-bottom: 88px; }
+    .hero-name { font-size: 15px; color: var(--on-navy-2); margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(40px, 5.2vw, 64px); font-weight: 600; margin-bottom: 24px; }
+    .hero-lead { font-size: 19px; color: var(--on-navy-2); max-width: 520px; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-facts { display: flex; flex-wrap: wrap; gap: 0; margin-top: 48px; border-top: 1px solid rgba(255,255,255,.14); }
+    .hero-facts div { padding: 18px 28px 0 0; margin-right: 28px; font-size: 14px; color: var(--on-navy-2); }
+    .hero-facts div:not(:last-child) { border-right: 1px solid rgba(255,255,255,.14); }
+    .hero-facts strong { display: block; color: var(--on-navy); font-weight: 600; font-size: 15px; }
+    .hero-photo { align-self: end; }
+    .hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; }
 
-    /* ===== NAV ===== */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 22px 0;
-      transition: background var(--ease), padding var(--ease), box-shadow var(--ease);
-    }
-    nav.scrolled {
-      background: rgba(28,28,28,0.97);
-      padding: 14px 0;
-      box-shadow: 0 2px 24px rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-    }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    /* Números */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .stat { padding: 36px 28px; }
+    .stat + .stat { border-left: 1px solid var(--line); }
+    .stat-num { font-family: var(--serif); font-size: 52px; line-height: 1; color: var(--navy-900); margin-bottom: 12px; }
+    .stat-num.word { font-size: 40px; line-height: 1.3; }
+    .stat-label { font-weight: 600; font-size: 15px; }
+    .stat-sub { font-size: 14px; color: var(--ink-2); }
 
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 18px; }
-    .nav-logo span { color: var(--gold); }
+    .record { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-top: 64px; padding: 40px; background: var(--paper-hi); border: 1px solid var(--line); }
+    .record h3 { font-size: 26px; margin-bottom: 12px; }
+    .record p { color: var(--ink-2); font-size: 16px; }
+    .record small { display: block; margin-top: 14px; font-size: 13px; color: var(--ink-2); }
+    .bar { display: flex; height: 14px; gap: 3px; margin-bottom: 20px; }
+    .bar span { display: block; height: 100%; }
+    .c-ativo { background: #2E8B6A; }
+    .c-adv { background: var(--blue); }
+    .c-outros { background: #9AA3AE; }
+    .legend { display: flex; gap: 32px; flex-wrap: wrap; }
+    .legend div { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink-2); }
+    .legend i { width: 12px; height: 12px; margin-top: 5px; display: block; }
+    .legend strong { display: block; color: var(--ink); font-size: 16px; }
 
-    .nav-links { display: flex; gap: 34px; list-style: none; }
-    .nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); transition: color var(--ease); }
-    .nav-links a:hover { color: var(--gold); }
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 64px; }
+    .tl-item { border-top: 2px solid var(--blue); padding-top: 18px; }
+    .tl-year { font-family: var(--serif); font-size: 30px; color: var(--navy-900); margin-bottom: 6px; }
+    .tl-item p { font-size: 15px; color: var(--ink-2); }
 
-    .nav-cta {
-      font-size: 13px; font-weight: 600; padding: 10px 22px;
-      border: 1.5px solid var(--gold); color: var(--gold);
-      border-radius: var(--radius); transition: background var(--ease), color var(--ease);
-    }
-    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+    /* Faixa de chamada */
+    .band { background: var(--navy-800); color: var(--on-navy); padding: 44px 0; }
+    .band-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .band h3 { font-size: 26px; margin-bottom: 4px; }
+    .band p { color: var(--on-navy-2); font-size: 16px; }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--ease); }
+    /* Sobre */
+    .about { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 72px; align-items: start; }
+    .about figure img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 10%; }
+    .about figcaption { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--ink); margin-top: 20px; padding-left: 18px; border-left: 2px solid var(--blue); }
+    .about h2 { font-size: clamp(30px, 3.6vw, 44px); margin-bottom: 28px; }
+    .about-text p { color: var(--ink-2); margin-bottom: 18px; }
+    .about-text p strong { color: var(--ink); font-weight: 600; }
+    .creds { margin-top: 36px; border-top: 1px solid var(--line); }
+    .creds h3 { font-size: 15px; font-family: var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; margin: 24px 0 8px; }
+    .creds ul { list-style: none; }
+    .creds li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; display: flex; justify-content: space-between; gap: 16px; }
+    .creds li span { color: var(--ink-2); white-space: nowrap; }
 
-    /* ===== MOBILE MENU ===== */
-    .mobile-menu {
-      display: none; position: fixed; inset: 0; z-index: 99;
-      background: rgba(22,22,22,0.98); flex-direction: column;
-      align-items: center; justify-content: center; gap: 36px;
-      backdrop-filter: blur(10px);
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--text); transition: color var(--ease); }
-    .mobile-menu a:hover { color: var(--gold); }
-    .mobile-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: var(--muted); font-size: 32px; cursor: pointer; line-height: 1; }
+    /* Áreas */
+    .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .area-group-head { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 2px solid var(--navy-900); margin-bottom: 8px; color: var(--navy-900); }
+    .area-group-head .ico { width: 26px; height: 26px; color: var(--blue); }
+    .area-group-head h3 { font-size: 24px; }
+    .area-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .area-item h4 { font-size: 20px; margin-bottom: 6px; }
+    .area-item p { color: var(--ink-2); font-size: 16px; }
 
-    /* ===== HERO ===== */
-    #hero {
-      min-height: 100vh; display: flex; align-items: center;
-      position: relative; overflow: hidden; padding: 130px 0 90px;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 55% 75% at 72% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
-        linear-gradient(140deg, #202020 0%, #292929 55%, #2E2E2E 100%);
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 1fr;
-      gap: 72px; align-items: center; position: relative; z-index: 1;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 22px;
-    }
-    .hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    /* Atendimento */
+    .process { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 72px; align-items: center; }
+    .steps { list-style: none; border-top: 1px solid var(--line); }
+    .steps li { display: grid; grid-template-columns: 56px 1fr; gap: 8px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .steps .n { font-family: var(--serif); font-size: 26px; color: var(--blue); line-height: 1.2; }
+    .steps h4 { font-size: 19px; margin-bottom: 4px; }
+    .steps p { color: var(--ink-2); font-size: 16px; }
+    .process img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; }
 
-    .hero-title { font-size: clamp(34px, 4.5vw, 54px); margin-bottom: 22px; }
-    .hero-title em { font-style: normal; color: var(--gold); }
+    /* Depoimentos (oculto até haver avaliações reais) */
+    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .review { border-top: 2px solid var(--blue); padding-top: 20px; }
+    .review blockquote { font-family: var(--serif); font-size: 19px; margin-bottom: 16px; }
+    .review cite { font-style: normal; font-size: 14px; color: var(--ink-2); }
 
-    .hero-desc { font-size: 15.5px; color: var(--muted); line-height: 1.9; margin-bottom: 38px; max-width: 500px; }
+    /* Contato */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .contact h2 { font-size: clamp(30px, 3.6vw, 44px); margin-bottom: 16px; }
+    .contact-lead { color: var(--ink-2); margin-bottom: 32px; }
+    .contact-list { list-style: none; border-top: 1px solid var(--line); margin-bottom: 32px; }
+    .contact-list li { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .contact-list .ico { color: var(--blue); margin-top: 3px; }
+    .contact-list small { display: block; font-size: 13px; color: var(--ink-2); }
+    .contact-list a:hover { color: var(--blue); }
+    .contact-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .form { background: var(--paper-hi); border: 1px solid var(--line); padding: 36px; }
+    .form h3 { font-size: 24px; margin-bottom: 6px; }
+    .form > p { font-size: 15px; color: var(--ink-2); margin-bottom: 24px; }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .field input, .field select, .field textarea { width: 100%; padding: 12px 14px; border: 1px solid #B9B1A2; border-radius: 4px; background: #fff; font: inherit; font-size: 16px; color: var(--ink); }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--blue); outline-offset: 1px; border-color: var(--blue); }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .form .btn { width: 100%; justify-content: center; }
 
-    .btn-gold {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; background: var(--gold); color: var(--bg);
-      font-weight: 700; font-size: 14px; border-radius: var(--radius);
-      transition: background var(--ease), transform var(--ease);
-    }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    /* Rodapé */
+    footer { background: var(--navy-900); color: var(--on-navy-2); padding: 56px 0 32px; font-size: 15px; }
+    .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .foot .brand { margin-bottom: 14px; }
+    .foot h4 { font-family: var(--sans); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--on-navy); margin-bottom: 14px; }
+    .foot ul { list-style: none; }
+    .foot li { margin-bottom: 8px; }
+    .foot a:hover { color: var(--on-navy); }
+    .foot-bottom { padding-top: 24px; font-size: 13px; }
 
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 28px; border: 1.5px solid var(--bg-3); color: var(--muted);
-      font-size: 14px; font-weight: 500; border-radius: var(--radius);
-      transition: border-color var(--ease), color var(--ease), transform var(--ease);
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 200; width: 58px; height: 58px; border-radius: 50%; background: var(--wa); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(11,27,48,.35); transition: background .2s; }
+    .wa-float:hover { background: var(--wa-dk); }
+    .wa-float .ico { width: 30px; height: 30px; }
 
-    .hero-stats {
-      display: flex; gap: 32px; margin-top: 52px;
-      padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--gold); }
-    .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 3px; }
-
-    /* Hero image */
-    .hero-img-wrap { position: relative; }
-    .hero-img-deco {
-      position: absolute; top: -16px; right: -16px;
-      width: 100px; height: 100px;
-      border: 1px solid rgba(201,168,76,0.25); border-radius: 50%;
-      pointer-events: none;
-    }
-    .hero-img-frame {
-      border-radius: 14px; overflow: hidden;
-      aspect-ratio: 3/4; background: var(--surface);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
-    }
-    .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-
-    .hero-badge {
-      position: absolute; bottom: 24px; left: -24px;
-      background: var(--bg-2); border: 1px solid rgba(201,168,76,0.25);
-      border-radius: var(--radius); padding: 14px 18px;
-      display: flex; align-items: center; gap: 12px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
-    }
-    .badge-icon {
-      width: 38px; height: 38px; background: var(--gold-dim);
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; font-size: 17px; flex-shrink: 0;
-    }
-    .badge-text strong { display: block; font-size: 13px; color: var(--text); }
-    .badge-text span { font-size: 11px; color: var(--muted); }
-
-    /* ===== TRAJETÓRIA ===== */
-    #trajetoria { background: var(--bg-2); }
-
-    .traj-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
-    .traj-header .line { margin: 18px auto; }
-
-    .traj-numbers {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      background: var(--bg-3);
-      border-radius: 14px;
-      overflow: hidden;
-      margin-bottom: 56px;
-    }
-
-    .traj-num-card {
-      background: var(--bg-2);
-      padding: 36px 28px;
-      text-align: center;
-      transition: background var(--ease);
-    }
-    .traj-num-card:hover { background: var(--bg-3); }
-
-    .traj-big-num {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 5vw, 60px);
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .traj-num-label {
-      font-size: 13px;
-      color: var(--text);
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .traj-num-sub {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .traj-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      gap: 20px;
-    }
-
-    .polo-card {
-      background: var(--bg-3);
-      border-radius: 14px;
-      padding: 32px 36px;
-      border-top: 3px solid var(--gold);
-    }
-    .polo-head { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
-    .polo-icon {
-      width: 46px; height: 46px; border-radius: 10px; background: var(--gold-dim);
-      display: flex; align-items: center; justify-content: center; font-size: 20px;
-    }
-    .polo-head-label { font-size: 12px; color: var(--muted); }
-    .polo-head-num { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--text); line-height: 1.1; }
-    .polo-bar { display: flex; height: 12px; border-radius: 99px; overflow: hidden; gap: 3px; margin-bottom: 18px; }
-    .polo-seg { display: block; height: 100%; }
-    .polo-seg-ativo { background: #2EAD7A; flex: 0 0 1%; }
-    .polo-seg-adv { background: var(--gold); flex: 1; }
-    .polo-seg-outros { background: #8A8A8A; flex: 0 0 1%; }
-    .polo-legend { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 20px; }
-    .polo-leg-item { display: flex; align-items: center; gap: 10px; }
-    .polo-sq { width: 14px; height: 14px; border-radius: 3px; flex: none !important; }
-    .polo-leg-item small { display: block; font-size: 12px; color: var(--muted); }
-    .polo-leg-item strong { font-size: 14px; color: var(--text); }
-    .polo-text { font-size: 14px; color: var(--muted); line-height: 1.75; }
-    .polo-text strong { color: var(--text); }
-
-    /* WhatsApp CTAs */
-    .wpp-float {
-      position: fixed; right: 22px; bottom: 22px; z-index: 200;
-      width: 60px; height: 60px; border-radius: 50%; background: #25D366;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 22px rgba(0,0,0,0.4);
-      transition: transform var(--ease);
-      animation: wppPulse 2.4s infinite;
-    }
-    .wpp-float:hover { transform: scale(1.08); }
-    .wpp-float svg { width: 32px; height: 32px; fill: #fff; }
-    @keyframes wppPulse {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55), 0 6px 22px rgba(0,0,0,0.4); }
-      70% { box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 6px 22px rgba(0,0,0,0.4); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 6px 22px rgba(0,0,0,0.4); }
-    }
-    .wpp-cta {
-      background: linear-gradient(135deg, rgba(42,95,191,0.18), rgba(42,95,191,0.06));
-      border: 1px solid rgba(42,95,191,0.35);
-      border-radius: 14px; padding: 28px 32px; margin-top: 48px;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
-    }
-    .wpp-cta h3 { font-size: 21px; color: var(--text); margin-bottom: 4px; }
-    .wpp-cta p { font-size: 14px; color: var(--muted); }
-    .wpp-cta .wpp-btn { margin-top: 0; }
-    @media (max-width: 900px) {
-      .traj-numbers { grid-template-columns: repeat(2, 1fr); }
-      .traj-timeline { flex-wrap: wrap; row-gap: 24px; }
-      .traj-timeline::before { display: none; }
-      .traj-step { flex: 0 0 50%; }
+    @media (max-width: 960px) {
+      .nav-links, .nav .btn { display: none; }
+      .hamburger { display: block; }
+      .hero { padding-top: 48px; }
+      .hero-grid, .about, .process, .contact, .record, .areas { grid-template-columns: 1fr; gap: 48px; }
+      .hero-text { padding-bottom: 0; }
+      .hero-photo { max-width: 420px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3) { border-left: 0; }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .timeline { grid-template-columns: repeat(2, 1fr); }
+      .reviews { grid-template-columns: 1fr; }
+      .foot { grid-template-columns: 1fr; }
+      .process img { max-width: 420px; }
     }
     @media (max-width: 600px) {
-      .wpp-cta { padding: 22px 20px; }
-      .wpp-cta .wpp-btn { width: 100%; justify-content: center; }
-      .polo-card { padding: 24px 20px; }
-    }
-
-    .traj-card {
-      background: var(--bg-3);
-      border-radius: 12px;
-      padding: 28px 28px;
-      border-left: 3px solid var(--gold);
-    }
-
-    .traj-card h3 {
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .traj-bar-wrap { display: flex; flex-direction: column; gap: 10px; }
-
-    .traj-bar-item { display: flex; flex-direction: column; gap: 4px; }
-
-    .traj-bar-top {
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .traj-bar-track {
-      height: 6px;
-      background: var(--bg);
-      border-radius: 99px;
-      overflow: hidden;
-    }
-
-    .traj-bar-fill {
-      height: 100%;
-      background: var(--gold);
-      border-radius: 99px;
-      transition: width 1.2s ease;
-    }
-
-    .traj-timeline {
-      display: flex;
-      gap: 0;
-      position: relative;
-      margin-top: 16px;
-    }
-
-    .traj-timeline::before {
-      content: '';
-      position: absolute;
-      top: 18px;
-      left: 10%;
-      right: 10%;
-      height: 2px;
-      background: var(--bg-3);
-    }
-
-    .traj-step {
-      flex: 1;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .traj-step-dot {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--bg-2);
-      border: 2px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 12px;
-      font-size: 15px;
-    }
-
-    .traj-step-year {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .traj-step-desc {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.5;
-      padding: 0 4px;
-    }
-
-    /* ===== SOBRE ===== */
-    #sobre { background: var(--bg-2); }
-    .sobre-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center; }
-
-    .sobre-img-wrap { position: relative; }
-    .sobre-img-frame {
-      border-radius: 14px; overflow: hidden; aspect-ratio: 3/4;
-      background: var(--surface); box-shadow: 0 20px 56px rgba(0,0,0,0.4);
-    }
-    .sobre-img-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-
-    .sobre-quote {
-      position: absolute; bottom: -18px; right: -18px;
-      background: var(--gold); color: var(--bg);
-      padding: 18px 22px; border-radius: var(--radius);
-      font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 600;
-      max-width: 210px; line-height: 1.5;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
-    }
-    .sobre-quote::before { content: '"'; font-size: 36px; line-height: 0.4; display: block; margin-bottom: 10px; opacity: 0.35; }
-
-    .sobre-info p { color: var(--muted); margin-bottom: 18px; font-size: 15.5px; }
-
-    .oab-tags { display: flex; gap: 10px; flex-wrap: wrap; margin: 28px 0; }
-    .oab-tag {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 8px 14px; background: var(--gold-dim);
-      border: 1px solid rgba(201,168,76,0.3); border-radius: 100px;
-      font-size: 13px; font-weight: 600; color: var(--gold);
-    }
-
-    .credentials { display: flex; flex-direction: column; gap: 10px; }
-    .cred {
-      display: flex; align-items: center; gap: 12px;
-      padding: 13px 16px; background: var(--bg-3);
-      border-radius: var(--radius); border-left: 3px solid var(--gold);
-      font-size: 14px; color: var(--text);
-    }
-
-    /* ===== ÁREAS ===== */
-    #areas { background: var(--bg); }
-    .areas-header { text-align: center; max-width: 600px; margin: 0 auto 56px; }
-    .areas-header .line { margin: 20px auto; }
-
-    .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-
-    .area-card {
-      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 14px; padding: 30px 26px;
-      transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
-    }
-    .area-card:hover {
-      border-color: rgba(201,168,76,0.35); transform: translateY(-4px);
-      box-shadow: 0 14px 36px rgba(0,0,0,0.3);
-    }
-    .area-icon {
-      width: 50px; height: 50px; background: var(--gold-dim);
-      border-radius: var(--radius); display: flex; align-items: center;
-      justify-content: center; font-size: 22px; margin-bottom: 18px;
-    }
-    .area-card h3 { font-size: 17px; color: var(--text); margin-bottom: 10px; }
-    .area-card p { font-size: 14px; color: var(--muted); line-height: 1.75; }
-    .area-tag {
-      display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 600;
-      color: var(--gold); letter-spacing: 0.3px;
-    }
-
-    /* ===== ATENDIMENTO ===== */
-    #atendimento { background: var(--bg-2); }
-    .atend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-
-    .atend-img-frame {
-      border-radius: 14px; overflow: hidden; aspect-ratio: 4/5;
-      background: var(--surface); box-shadow: 0 20px 56px rgba(0,0,0,0.4);
-    }
-    .atend-img-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-
-    .atend-info .subtitle { margin-bottom: 36px; }
-
-    .atend-items { display: flex; flex-direction: column; gap: 14px; }
-    .atend-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 16px 18px; background: var(--bg-3); border-radius: var(--radius);
-    }
-    .atend-item-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-    .atend-item strong { display: block; font-size: 14px; color: var(--text); margin-bottom: 2px; }
-    .atend-item span { font-size: 13px; color: var(--muted); }
-
-    /* ===== CONTATO ===== */
-    #contato { background: var(--bg); }
-    .contato-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; }
-
-    .contact-items { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
-    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
-    .contact-icon {
-      width: 44px; height: 44px; background: var(--gold-dim);
-      border-radius: var(--radius); display: flex; align-items: center;
-      justify-content: center; font-size: 18px; flex-shrink: 0;
-    }
-    .contact-item-text strong { display: block; font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 3px; }
-    .contact-item-text span { font-size: 15px; color: var(--text); }
-
-    .wpp-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      margin-top: 36px; padding: 15px 28px;
-      background: #25D366; color: white; font-weight: 700; font-size: 14px;
-      border-radius: var(--radius); transition: background var(--ease), transform var(--ease);
-    }
-    .wpp-btn:hover { background: #1ebe59; transform: translateY(-2px); }
-
-    .contact-form {
-      background: var(--bg-2); border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 14px; padding: 40px 36px;
-    }
-    .contact-form h3 { font-size: 22px; color: var(--text); margin-bottom: 28px; }
-
-    .form-group { margin-bottom: 16px; }
-    .form-group label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%; background: var(--bg-3); border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius); padding: 12px 16px;
-      font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text);
-      transition: border-color var(--ease); outline: none;
-    }
-    .form-group select option { background: var(--bg-3); }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--muted); opacity: 0.55; }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--gold); }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-
-    .form-submit {
-      width: 100%; padding: 14px; background: var(--gold); color: var(--bg);
-      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700;
-      border: none; border-radius: var(--radius); cursor: pointer;
-      transition: background var(--ease), transform var(--ease); margin-top: 6px;
-    }
-    .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-    /* ===== DEPOIMENTOS ===== */
-    #depoimentos { background: var(--bg-2); }
-
-    .dep-header { text-align: center; margin-bottom: 48px; }
-    .dep-header .line { margin: 18px auto; }
-
-    .dep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
-    .dep-card {
-      background: var(--bg-3);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 28px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      min-height: 200px;
-      position: relative;
-    }
-
-    .dep-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex: 1;
-      gap: 10px;
-      opacity: 0.4;
-    }
-
-    .dep-placeholder-icon { font-size: 32px; }
-    .dep-placeholder-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
-
-    .dep-add-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 32px auto 0;
-      padding: 12px 28px;
-      border: 1.5px dashed rgba(42,95,191,0.4);
-      border-radius: var(--radius);
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: default;
-      width: fit-content;
-    }
-
-    @media (max-width: 900px) {
-      .dep-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #1C1C1C; padding: 40px 0;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 17px; }
-    .footer-logo span { color: var(--gold); }
-    .footer-links { display: flex; gap: 24px; list-style: none; }
-    .footer-links a { font-size: 13px; color: var(--muted); transition: color var(--ease); }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-size: 12px; color: var(--muted); }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .hero-grid,
-      .sobre-grid,
-      .atend-grid,
-      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
-
-      .hero-img-wrap { max-width: 340px; margin: 0 auto; order: -1; }
-      .hero-badge { left: 0; }
-      .sobre-img-wrap { max-width: 340px; margin: 0 auto; }
-      .sobre-quote { position: static; margin-top: 20px; max-width: 100%; }
-      .atend-img-frame { max-height: 400px; }
-
-      .areas-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .hero-stats { gap: 18px; }
-    }
-
-    @media (max-width: 600px) {
+      body { font-size: 16px; }
       .section { padding: 64px 0; }
-      .areas-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .contact-form { padding: 28px 20px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-      .oab-tags { flex-direction: column; }
+      .hero-facts div { border-right: 0 !important; padding-right: 0; margin-right: 0; width: 100%; padding-bottom: 4px; }
+      .stat { padding: 24px 16px; }
+      .stat-num { font-size: 40px; }
+      .stat-num.word { font-size: 30px; }
+      .record, .form { padding: 24px 20px; }
+      .timeline { grid-template-columns: 1fr; gap: 24px; }
+      .band .btn, .hero-actions .btn, .contact-actions .btn { width: 100%; justify-content: center; }
+      .creds li { flex-direction: column; gap: 2px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="container nav-inner">
-      <a href="#hero" class="nav-logo">Anthony <span>Webler</span></a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.71 5.8.71 12.05c0 2 .52 3.95 1.51 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.08 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  </svg>
+
+  <header>
+    <div class="container nav">
+      <a href="#inicio" class="brand"><strong>Anthony Webler</strong><span>Advocacia</span></a>
       <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#trajetoria">Trajetória</a></li>
-        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#areas">Áreas de atuação</a></li>
+        <li><a href="#atendimento">Atendimento</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="nav-cta">WhatsApp</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><svg class="ico"><use href="#i-menu"/></svg></button>
     </div>
-  </nav>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#areas">Áreas de atuação</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" id="mobileClose">&#x2715;</button>
-    <a href="#sobre" class="m-link">Sobre</a>
-    <a href="#areas" class="m-link">Áreas de Atuação</a>
-    <a href="#atendimento" class="m-link">Atendimento</a>
-    <a href="#contato" class="m-link">Contato</a>
-  </div>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-eyebrow">OAB/RO 10.953 · OAB/AM A2232</div>
-          <h1 class="hero-title">
-            Seus direitos,<br/>
-            defendidos com<br/>
-            <em>dedicação.</em>
-          </h1>
-          <p class="hero-desc">
-            Especialista em ações contra o INSS e defesa dos servidores públicos. Atendimento em todo o Brasil com base em Cacoal/RO.
-          </p>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-name">Dr. Anthony Henrik Webler · Advogado</p>
+          <h1>Seus direitos, defendidos com dedicação.</h1>
+          <p class="hero-lead">Ações contra o INSS e defesa de servidores públicos. Escritório em Cacoal/RO, com atendimento presencial e online para todo o Brasil.</p>
           <div class="hero-actions">
-            <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn-gold">
-              &#128172; Falar no WhatsApp
-            </a>
-            <a href="#areas" class="btn-ghost">
-              Ver especialidades &#8594;
-            </a>
+            <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+            <a href="#areas" class="btn btn-line-light">Áreas de atuação<svg class="ico"><use href="#i-arrow"/></svg></a>
           </div>
-          <div class="hero-stats">
-            <div>
-              <div class="stat-num">RO + AM</div>
-              <div class="stat-lbl">estados de atuação</div>
-            </div>
-            <div>
-              <div class="stat-num">100%</div>
-              <div class="stat-lbl">Brasil atendido</div>
-            </div>
-            <div>
-              <div class="stat-num">2 OABs</div>
-              <div class="stat-lbl">inscrições ativas</div>
-            </div>
+          <div class="hero-facts">
+            <div><strong>OAB/RO 10.953</strong>OAB/AM A2232</div>
+            <div><strong>969 processos</strong>no Jusbrasil</div>
+            <div><strong>Todo o Brasil</strong>presencial e online</div>
           </div>
         </div>
-
-        <div class="hero-img-wrap">
-          <div class="hero-img-deco"></div>
-          <div class="hero-img-frame">
-            <img src="foto-hero.jpeg" alt="Dr. Anthony Henrik Webler" />
-          </div>
-          <div class="hero-badge">
-            <div class="badge-icon">⚖️</div>
-            <div class="badge-text">
-              <strong>Advocacia especializada</strong>
-              <span>Cacoal · Rondônia</span>
-            </div>
-          </div>
+        <div class="hero-photo">
+          <img src="foto-hero.jpeg" alt="Dr. Anthony Henrik Webler em seu escritório" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TRAJETÓRIA -->
-  <section id="trajetoria" class="section">
-    <div class="container">
+    <section class="section bg-paper" id="trajetoria">
+      <div class="container">
+        <div class="sec-head">
+          <h2>Experiência comprovada em números</h2>
+          <p>No meio jurídico desde 2017, com atuação constante em Rondônia e no Amazonas e clientes em vários estados do país.</p>
+        </div>
 
-      <div class="traj-header">
-        <div class="label">Nossa Trajetória</div>
-        <h2 class="title">Experiência comprovada em números</h2>
-        <div class="line line-center"></div>
-        <p class="subtitle">Desde 2017 no meio jurídico, o Dr. Anthony acumulou uma trajetória sólida de atuação em Rondônia e Amazonas, com centenas de processos conduzidos com dedicação e técnica.</p>
-      </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-num">969</div><div class="stat-label">Processos</div><div class="stat-sub">registrados no Jusbrasil</div></div>
+          <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Clientes atendidos</div><div class="stat-sub">em diferentes estados</div></div>
+          <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Anos de experiência</div><div class="stat-sub">no meio jurídico</div></div>
+          <div class="stat"><div class="stat-num word">Brasil</div><div class="stat-label">Atendimento nacional</div><div class="stat-sub">presencial e online</div></div>
+        </div>
 
-      <!-- NÚMEROS PRINCIPAIS -->
-      <div class="traj-numbers">
-        <div class="traj-num-card">
-          <div class="traj-big-num" data-target="969">0</div>
-          <div class="traj-num-label">Processos</div>
-          <div class="traj-num-sub">registrados no Jusbrasil</div>
-        </div>
-        <div class="traj-num-card">
-          <div class="traj-big-num">🇧🇷</div>
-          <div class="traj-num-label">Atendimento em todo o Brasil</div>
-          <div class="traj-num-sub">presencial e online</div>
-        </div>
-        <div class="traj-num-card">
-          <div class="traj-big-num" data-target="500">0</div>
-          <div class="traj-num-label">Clientes atendidos</div>
-          <div class="traj-num-sub">em todo o Brasil</div>
-        </div>
-        <div class="traj-num-card">
-          <div class="traj-big-num">8+</div>
-          <div class="traj-num-label">Anos de experiência</div>
-          <div class="traj-num-sub">no meio jurídico</div>
-        </div>
-      </div>
-
-      <!-- BARRAS E CLIENTES -->
-      <div class="traj-grid">
-        <div class="polo-card">
-          <div class="polo-head">
-            <div class="polo-icon">⚖️</div>
-            <div>
-              <div class="polo-head-label">Processos</div>
-              <div class="polo-head-num">969</div>
+        <div class="record">
+          <div>
+            <h3>969 processos, quase todos como advogado</h3>
+            <p>O nome Anthony Henrik Webler aparece em 969 processos, em sua grande maioria como advogado, representando clientes em ações contra o INSS e na defesa de servidores públicos.</p>
+            <small>Fonte: Jusbrasil</small>
+          </div>
+          <div>
+            <div class="bar" role="img" aria-label="Menos de 1% polo ativo, mais de 99% como advogado, menos de 1% outros">
+              <span class="c-ativo" style="flex:0 0 1%"></span>
+              <span class="c-adv" style="flex:1"></span>
+              <span class="c-outros" style="flex:0 0 1%"></span>
+            </div>
+            <div class="legend">
+              <div><i class="c-ativo"></i><span>Polo ativo<strong>&lt; 1%</strong></span></div>
+              <div><i class="c-adv"></i><span>Advogado<strong>&gt; 99%</strong></span></div>
+              <div><i class="c-outros"></i><span>Outros<strong>&lt; 1%</strong></span></div>
             </div>
           </div>
-          <div class="polo-bar">
-            <span class="polo-seg polo-seg-ativo"></span>
-            <span class="polo-seg polo-seg-adv"></span>
-            <span class="polo-seg polo-seg-outros"></span>
-          </div>
-          <div class="polo-legend">
-            <div class="polo-leg-item"><span class="polo-sq polo-seg-ativo"></span><div><small>Polo ativo</small><strong>&lt; 1%</strong></div></div>
-            <div class="polo-leg-item"><span class="polo-sq polo-seg-adv"></span><div><small>Advogado</small><strong>&gt; 99%</strong></div></div>
-            <div class="polo-leg-item"><span class="polo-sq polo-seg-outros"></span><div><small>Outros</small><strong>&lt; 1%</strong></div></div>
-          </div>
-          <p class="polo-text">
-            O nome Anthony Henrik Webler aparece em <strong>969 processos</strong>, em sua grande maioria como advogado — representando clientes em ações contra o INSS e na defesa de servidores públicos.
-          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">2017</div><p>Início no meio jurídico, já atuando com servidores públicos.</p></div>
+          <div class="tl-item"><div class="tl-year">2020</div><p>Formatura em Direito pela UNIR, campus Cacoal, e inscrição na OAB/RO.</p></div>
+          <div class="tl-item"><div class="tl-year">2021</div><p>Inscrição na OAB/AM e início da atuação no Amazonas.</p></div>
+          <div class="tl-item"><div class="tl-year">Hoje</div><p>969 processos e pós-graduações em RPPS e Direito Tributário.</p></div>
         </div>
       </div>
+    </section>
 
-      <!-- LINHA DO TEMPO -->
-      <div class="traj-card" style="border-left: none; border-top: 3px solid var(--gold); border-radius: 12px; padding: 32px 36px;">
-        <h3 style="text-align:center; justify-content:center; margin-bottom:32px;">🗓️ Uma trajetória construída com propósito</h3>
-        <div class="traj-timeline">
-          <div class="traj-step">
-            <div class="traj-step-dot">📚</div>
-            <div class="traj-step-year">2017</div>
-            <div class="traj-step-desc">Início no meio jurídico, já atuando com servidores públicos</div>
-          </div>
-          <div class="traj-step">
-            <div class="traj-step-dot">🎓</div>
-            <div class="traj-step-year">2020</div>
-            <div class="traj-step-desc">Formatura em Direito pela UNIR — Cacoal/RO. Inscrição na OAB/RO</div>
-          </div>
-          <div class="traj-step">
-            <div class="traj-step-dot">⚖️</div>
-            <div class="traj-step-year">2021</div>
-            <div class="traj-step-desc">Expansão para o Amazonas. Inscrição na OAB/AM</div>
-          </div>
-          <div class="traj-step">
-            <div class="traj-step-dot">🏛️</div>
-            <div class="traj-step-year">2025</div>
-            <div class="traj-step-desc">969+ processos. Pós em RPPS, Tributário, BPC e Incapacidade</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wpp-cta">
+    <section class="band">
+      <div class="container band-inner">
         <div>
           <h3>Quer saber se você tem direito?</h3>
           <p>A análise inicial do seu caso é gratuita e sem compromisso.</p>
         </div>
-        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="section">
-    <div class="container">
-      <div class="sobre-grid">
-        <div class="sobre-img-wrap">
-          <div class="sobre-img-frame">
-            <img src="foto-sobre.jpeg" alt="Dr. Anthony Henrik Webler" />
-          </div>
-          <div class="sobre-quote">
-            A revolta com a injustiça virou propósito de vida.
-          </div>
-        </div>
+    <section class="section" id="sobre">
+      <div class="container about">
+        <figure>
+          <img src="foto-sobre.jpeg" alt="Dr. Anthony Henrik Webler" />
+          <figcaption>“A revolta com a injustiça virou propósito de vida.”</figcaption>
+        </figure>
+        <div class="about-text">
+          <h2>Sobre o Dr. Anthony</h2>
+          <p>Cresci no sítio e aprendi desde cedo o valor do trabalho duro. Vi de perto a luta diária de quem passa a vida inteira trabalhando, seja no campo, no serviço público ou contribuindo ao INSS, e que, no momento de maior necessidade, se vê desamparado por um sistema que deveria protegê-lo.</p>
+          <p>Essa revolta virou propósito. Entrei no meio jurídico em 2017, ainda antes de me formar, já atuando diretamente com servidores públicos e causas previdenciárias. Me formei em Direito pela <strong>UNIR, Universidade Federal de Rondônia</strong>, campus de Cacoal, e desde 2020 advogo com uma certeza: cada processo representa uma vida, uma família, uma dignidade que precisa ser respeitada.</p>
+          <p>Sou apaixonado pela causa. Não é só profissão, é compromisso. O descaso do INSS com quem tem direito a benefícios e o abandono dos municípios com seus próprios servidores me movem todos os dias a lutar com técnica, dedicação e humanidade.</p>
 
-        <div class="sobre-info">
-          <div class="label">Sobre mim</div>
-          <h2 class="title">Dr. Anthony Henrik Webler</h2>
-          <div class="line"></div>
-
-          <p>
-            Cresci no sítio e aprendi desde cedo o valor do trabalho duro. Vi de perto a luta diária de quem passa a vida inteira trabalhando — seja no campo, no serviço público ou contribuindo ao INSS — e que, no momento de maior necessidade, se vê desamparado por um sistema que deveria protegê-lo.
-          </p>
-          <p>
-            Essa revolta virou propósito. Entrei no meio jurídico em 2017, ainda antes de me formar, já atuando diretamente com servidores públicos e causas previdenciárias. Me formei em Direito pela <strong>UNIR — Universidade Federal de Rondônia</strong>, campus de Cacoal, e desde 2020 advogo com uma certeza: cada processo representa uma vida, uma família, uma dignidade que precisa ser respeitada.
-          </p>
-          <p>
-            Sou apaixonado pela causa. Não é só profissão — é compromisso. O descaso do INSS com quem tem direito a benefícios e o abandono dos municípios com seus próprios servidores me movem todos os dias a lutar com técnica, dedicação e humanidade.
-          </p>
-
-          <div class="oab-tags">
-            <span class="oab-tag">⚖️ OAB/RO nº 10.953</span>
-            <span class="oab-tag">⚖️ OAB/AM nº A2232</span>
-          </div>
-
-          <div class="credentials">
-            <div class="cred">🎓 Bacharel em Direito — UNIR, campus Cacoal/RO</div>
-            <div class="cred">📚 Pós-graduação em Previdência do Regime Próprio (RPPS)</div>
-            <div class="cred">📚 Pós-graduação em Direito Tributário</div>
-            <div class="cred">📋 Cursos de especialização em BPC/LOAS e Aposentadoria por Incapacidade</div>
-            <div class="cred">⚖️ Advogado desde 2020 · No meio jurídico desde 2017</div>
-            <div class="cred">🇧🇷 Atende todo o Brasil — presencial e online</div>
+          <div class="creds">
+            <h3>Formação</h3>
+            <ul>
+              <li>Bacharel em Direito <span>UNIR, Cacoal/RO</span></li>
+              <li>Pós-graduação em Previdência do Regime Próprio (RPPS)</li>
+              <li>Pós-graduação em Direito Tributário</li>
+              <li>Cursos em BPC/LOAS e Aposentadoria por Incapacidade</li>
+            </ul>
+            <h3>Inscrições</h3>
+            <ul>
+              <li>Ordem dos Advogados do Brasil, Rondônia <span>OAB/RO 10.953</span></li>
+              <li>Ordem dos Advogados do Brasil, Amazonas <span>OAB/AM A2232</span></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="wpp-cta">
+    </section>
+
+    <section class="band">
+      <div class="container band-inner">
         <div>
           <h3>Vamos conversar sobre o seu caso?</h3>
-          <p>Atendimento humanizado, presencial em Cacoal/RO ou online para todo o Brasil.</p>
+          <p>Atendimento presencial em Cacoal/RO ou online para todo o Brasil.</p>
         </div>
-        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ÁREAS -->
-  <section id="areas" class="section">
-    <div class="container">
-      <div class="areas-header">
-        <div class="label">Especialidades</div>
-        <h2 class="title">Áreas de Atuação</h2>
-        <div class="line line-center"></div>
-        <p class="subtitle">Atuação focada nas principais demandas previdenciárias e do funcionalismo público, com profundidade técnica e atendimento humanizado.</p>
+    <section class="section bg-paper" id="areas">
+      <div class="container">
+        <div class="sec-head">
+          <h2>Áreas de atuação</h2>
+          <p>Atuação concentrada em duas frentes: o direito previdenciário e os direitos do servidor público.</p>
+        </div>
+        <div class="areas">
+          <div>
+            <div class="area-group-head"><svg class="ico"><use href="#i-file"/></svg><h3>Previdenciário (INSS)</h3></div>
+            <div class="area-item"><h4>Aposentadoria por incapacidade</h4><p>Benefício por invalidez ou incapacidade permanente negado ou cancelado pelo INSS.</p></div>
+            <div class="area-item"><h4>Revisão de benefícios</h4><p>Valores pagos a menor, correção do tempo de contribuição e recálculo de benefícios.</p></div>
+            <div class="area-item"><h4>BPC / LOAS</h4><p>Benefício para idosos e pessoas com deficiência: concessão, revisão e recursos contra indeferimento.</p></div>
+          </div>
+          <div>
+            <div class="area-group-head"><svg class="ico"><use href="#i-landmark"/></svg><h3>Servidor público</h3></div>
+            <div class="area-item"><h4>Processo administrativo disciplinar</h4><p>Defesa em PAD, sindicâncias e processos de demissão.</p></div>
+            <div class="area-item"><h4>Direitos e vencimentos</h4><p>Verbas atrasadas, progressões, promoções, adicionais e equiparações salariais.</p></div>
+            <div class="area-item"><h4>Aposentadoria do servidor</h4><p>Planejamento e concessão pelo regime próprio (RPPS) e revisão de benefícios já concedidos.</p></div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="areas-grid">
-        <div class="area-card">
-          <div class="area-icon">🏥</div>
-          <h3>Aposentadoria por Incapacidade</h3>
-          <p>Aposentadoria por invalidez ou incapacidade permanente negada ou cancelada pelo INSS. Defesa do seu direito ao benefício.</p>
-          <span class="area-tag">INSS</span>
-        </div>
-        <div class="area-card">
-          <div class="area-icon">📋</div>
-          <h3>Revisão de Benefícios</h3>
-          <p>Revisão de valores pagos a menor, correção de tempo de contribuição e recálculo de benefícios previdenciários.</p>
-          <span class="area-tag">INSS</span>
-        </div>
-        <div class="area-card">
-          <div class="area-icon">🤝</div>
-          <h3>BPC / LOAS</h3>
-          <p>Benefício de Prestação Continuada para idosos e pessoas com deficiência. Concessão, revisão e recursos de indeferimento.</p>
-          <span class="area-tag">INSS</span>
-        </div>
-        <div class="area-card">
-          <div class="area-icon">🎖️</div>
-          <h3>Servidor Público</h3>
-          <p>Defesa em processos administrativos disciplinares (PAD), sindicâncias e demissões de servidores públicos.</p>
-          <span class="area-tag">Servidor Público</span>
-        </div>
-        <div class="area-card">
-          <div class="area-icon">💰</div>
-          <h3>Direitos e Vencimentos</h3>
-          <p>Cobranças de verbas atrasadas, progressões, promoções, adicionais e equiparações salariais de servidores.</p>
-          <span class="area-tag">Servidor Público</span>
-        </div>
-        <div class="area-card">
-          <div class="area-icon">🔄</div>
-          <h3>Aposentadoria do Servidor</h3>
-          <p>Planejamento e concessão de aposentadoria pelo regime próprio (RPPS) e revisão de benefícios já concedidos.</p>
-          <span class="area-tag">Servidor Público</span>
-        </div>
-      </div>
-      <div class="wpp-cta">
+    <section class="band">
+      <div class="container band-inner">
         <div>
           <h3>Teve o benefício negado ou cortado pelo INSS?</h3>
-          <p>Ou é servidor e está enfrentando um PAD? Fale agora com o Dr. Anthony.</p>
+          <p>Ou é servidor e está respondendo a um PAD? Fale agora com o Dr. Anthony.</p>
         </div>
-        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ATENDIMENTO -->
-  <section id="atendimento" class="section">
-    <div class="container">
-      <div class="atend-grid">
+    <section class="section" id="atendimento">
+      <div class="container process">
         <div>
-          <div class="label">Como funciona</div>
-          <h2 class="title">Atendimento em todo o Brasil</h2>
-          <div class="line"></div>
-          <p class="subtitle" style="margin-bottom:36px;">
-            Com base em Cacoal/RO e atuação frequente em Rondônia e Amazonas, o Dr. Anthony atende clientes de qualquer estado de forma presencial ou online, sem burocracia.
-          </p>
-
-          <div class="atend-items">
-            <div class="atend-item">
-              <div class="atend-item-icon">💬</div>
-              <div>
-                <strong>1. Primeiro contato pelo WhatsApp</strong>
-                <span>Explique seu caso de forma simples. Resposta rápida e sem compromisso.</span>
-              </div>
-            </div>
-            <div class="atend-item">
-              <div class="atend-item-icon">🔍</div>
-              <div>
-                <strong>2. Análise gratuita do caso</strong>
-                <span>Avaliação das chances de êxito e orientação sobre os próximos passos.</span>
-              </div>
-            </div>
-            <div class="atend-item">
-              <div class="atend-item-icon">📁</div>
-              <div>
-                <strong>3. Início do processo</strong>
-                <span>Documentação, peticionamento e acompanhamento completo do seu processo.</span>
-              </div>
-            </div>
-            <div class="atend-item">
-              <div class="atend-item-icon">✅</div>
-              <div>
-                <strong>4. Resultado e prestação de contas</strong>
-                <span>Atualizações constantes e transparência em cada etapa da sua causa.</span>
-              </div>
-            </div>
+          <div class="sec-head" style="margin-bottom:32px">
+            <h2>Como funciona o atendimento</h2>
+            <p>Você não precisa sair de casa. O atendimento pode ser feito inteiramente online, de qualquer estado.</p>
           </div>
+          <ol class="steps">
+            <li><span class="n">01</span><div><h4>Primeiro contato</h4><p>Explique seu caso pelo WhatsApp, de forma simples e sem compromisso.</p></div></li>
+            <li><span class="n">02</span><div><h4>Análise gratuita</h4><p>Avaliação das chances de êxito e orientação sobre os próximos passos.</p></div></li>
+            <li><span class="n">03</span><div><h4>Início do processo</h4><p>Organização dos documentos, ajuizamento e acompanhamento completo.</p></div></li>
+            <li><span class="n">04</span><div><h4>Acompanhamento</h4><p>Atualizações constantes e transparência em cada etapa da causa.</p></div></li>
+          </ol>
         </div>
+        <img src="foto-atend.jpeg" alt="Dr. Anthony Henrik Webler" />
+      </div>
+    </section>
 
-        <div class="atend-img-frame">
-          <img src="foto-atend.jpeg" alt="Dr. Anthony Henrik Webler no escritório" />
+    <!-- Depoimentos: remover o atributo "hidden" quando houver avaliações reais -->
+    <section class="section bg-paper" id="depoimentos" hidden>
+      <div class="container">
+        <div class="sec-head"><h2>O que dizem os clientes</h2></div>
+        <div class="reviews">
+          <div class="review"><blockquote>Texto do depoimento.</blockquote><cite>Nome do cliente · Cidade/UF</cite></div>
+          <div class="review"><blockquote>Texto do depoimento.</blockquote><cite>Nome do cliente · Cidade/UF</cite></div>
+          <div class="review"><blockquote>Texto do depoimento.</blockquote><cite>Nome do cliente · Cidade/UF</cite></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos" class="section">
-    <div class="container">
-      <div class="dep-header">
-        <div class="label">Depoimentos</div>
-        <h2 class="title">O que dizem nossos clientes</h2>
-        <div class="line line-center"></div>
-        <p class="subtitle" style="margin: 0 auto;">Em breve, avaliações reais de clientes atendidos em todo o Brasil.</p>
-      </div>
-
-      <div class="dep-grid">
-        <div class="dep-card">
-          <div class="dep-placeholder">
-            <div class="dep-placeholder-icon">💬</div>
-            <div class="dep-placeholder-text">Depoimento em breve</div>
-          </div>
-        </div>
-        <div class="dep-card">
-          <div class="dep-placeholder">
-            <div class="dep-placeholder-icon">💬</div>
-            <div class="dep-placeholder-text">Depoimento em breve</div>
-          </div>
-        </div>
-        <div class="dep-card">
-          <div class="dep-placeholder">
-            <div class="dep-placeholder-icon">💬</div>
-            <div class="dep-placeholder-text">Depoimento em breve</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dep-add-btn">⭐ Espaço reservado para avaliações de clientes</div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <div class="container">
-      <div class="contato-grid">
+    <section class="section bg-paper" id="contato">
+      <div class="container contact">
         <div>
-          <div class="label">Fale Conosco</div>
-          <h2 class="title">Vamos conversar sobre o seu caso</h2>
-          <div class="line"></div>
-          <p class="subtitle" style="margin-bottom:36px;">
-            A análise inicial é gratuita. Entre em contato pelo WhatsApp, e-mail ou pelo formulário.
-          </p>
-
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div class="contact-item-text">
-                <strong>Base de atendimento</strong>
-                <span>Cacoal — Rondônia<br/>Atende todo o Brasil</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📱</div>
-              <div class="contact-item-text">
-                <strong>WhatsApp / Telefone</strong>
-                <span>(69) 9 9319-4892</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div class="contact-item-text">
-                <strong>E-mail</strong>
-                <span>cwadvocaciaro@gmail.com</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">⚖️</div>
-              <div class="contact-item-text">
-                <strong>OAB</strong>
-                <span>OAB/RO nº 10.953 · OAB/AM nº A2232</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:36px;">
-            <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn" style="margin-top:0;">
-              &#128172; Chamar no WhatsApp
-            </a>
-            <a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:15px 22px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;font-weight:700;font-size:14px;border-radius:var(--radius);transition:opacity 0.3s;text-decoration:none;">
-              📷 Instagram
-            </a>
+          <h2>Fale com o escritório</h2>
+          <p class="contact-lead">A análise inicial é gratuita. Escolha o canal que preferir.</p>
+          <ul class="contact-list">
+            <li><svg class="ico"><use href="#i-phone"/></svg><div><small>WhatsApp e telefone</small><a href="https://wa.me/5569993194892" target="_blank" rel="noopener">(69) 9 9319-4892</a></div></li>
+            <li><svg class="ico"><use href="#i-mail"/></svg><div><small>E-mail</small><a href="mailto:cwadvocaciaro@gmail.com">cwadvocaciaro@gmail.com</a></div></li>
+            <li><svg class="ico"><use href="#i-pin"/></svg><div><small>Escritório</small>Cacoal, Rondônia · atendimento em todo o Brasil</div></li>
+            <li><svg class="ico"><use href="#i-scale"/></svg><div><small>Inscrições na OAB</small>OAB/RO 10.953 · OAB/AM A2232</div></li>
+          </ul>
+          <div class="contact-actions">
+            <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+            <a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener" class="btn btn-line"><svg class="ico"><use href="#i-ig"/></svg>@anthonywebleradv</a>
           </div>
         </div>
 
-        <div class="contact-form">
-          <h3>Envie sua mensagem</h3>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="nome">Nome completo</label>
-              <input type="text" id="nome" placeholder="Seu nome" required />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" placeholder="seu@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="telefone" placeholder="(00) 9 0000-0000" />
-            </div>
-            <div class="form-group">
-              <label for="area">Área de interesse</label>
-              <select id="area">
-                <option value="">Selecione uma área</option>
-                <option>Aposentadoria por Incapacidade (INSS)</option>
-                <option>Revisão de Benefício (INSS)</option>
-                <option>BPC / LOAS</option>
-                <option>Defesa do Servidor Público (PAD)</option>
-                <option>Direitos e Vencimentos do Servidor</option>
-                <option>Aposentadoria do Servidor (RPPS)</option>
-                <option>Outro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" placeholder="Descreva brevemente seu caso..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit">Enviar Mensagem</button>
-          </form>
-        </div>
+        <form class="form" id="contactForm">
+          <h3>Envie seu caso</h3>
+          <p>Ao enviar, o WhatsApp abre com a sua mensagem já preenchida.</p>
+          <div class="field"><label for="nome">Nome</label><input type="text" id="nome" autocomplete="name" required /></div>
+          <div class="field"><label for="cidade">Cidade / UF</label><input type="text" id="cidade" /></div>
+          <div class="field">
+            <label for="area">Assunto</label>
+            <select id="area">
+              <option value="">Selecione</option>
+              <option>Aposentadoria por incapacidade (INSS)</option>
+              <option>Revisão de benefício (INSS)</option>
+              <option>BPC / LOAS</option>
+              <option>Processo administrativo disciplinar (PAD)</option>
+              <option>Direitos e vencimentos do servidor</option>
+              <option>Aposentadoria do servidor (RPPS)</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="field"><label for="mensagem">Conte brevemente o seu caso</label><textarea id="mensagem" required></textarea></div>
+          <button type="submit" class="btn btn-wa"><svg class="ico ico-fill"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-logo">Anthony <span>Webler</span> Advocacia</div>
-      <ul class="footer-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#trajetoria">Trajetória</a></li>
-        <li><a href="#areas">Áreas</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-      <div class="footer-copy">© 2026 · OAB/RO 10.953 · OAB/AM A2232</div>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <div class="brand"><strong>Anthony Webler</strong><span>Advocacia</span></div>
+          <p>Direito previdenciário e do servidor público.<br/>OAB/RO 10.953 · OAB/AM A2232</p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#trajetoria">Trajetória</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#areas">Áreas de atuação</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5569993194892" target="_blank" rel="noopener">(69) 9 9319-4892</a></li>
+            <li><a href="mailto:cwadvocaciaro@gmail.com">cwadvocaciaro@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/anthonywebleradv/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">© 2026 Anthony Henrik Webler · Advocacia. Cacoal/RO.</div>
     </div>
   </footer>
 
-  <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-float" aria-label="Chamar no WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.71 5.8.71 12.05c0 2 .52 3.95 1.51 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.08 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></svg>
-  </a>
+  <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wa-float" aria-label="Chamar no WhatsApp"><svg class="ico ico-fill"><use href="#i-wa"/></svg></a>
 
   <script>
-    // Nav scroll
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
-
-    // Mobile menu
-    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
-    document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
-    document.querySelectorAll('.m-link').forEach(l => l.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open')));
-
-    // Form
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('.form-submit');
-      btn.textContent = 'Mensagem enviada! ✓';
-      btn.style.background = '#4CAF50';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Enviar Mensagem';
-        btn.style.background = '';
-        btn.disabled = false;
-        this.reset();
-      }, 3000);
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
     });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }));
 
-    // Contador animado
-    function animateCount(el, target, duration = 1800) {
-      let start = 0;
-      const step = target / (duration / 16);
-      const timer = setInterval(() => {
-        start += step;
-        if (start >= target) { el.textContent = target.toLocaleString('pt-BR') + '+'; clearInterval(timer); }
-        else el.textContent = Math.floor(start).toLocaleString('pt-BR');
-      }, 16);
-    }
-
-    // Anima barras
-    const barObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        e.target.querySelectorAll('.traj-bar-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width;
-        });
-        e.target.querySelectorAll('.traj-big-num[data-target]').forEach(num => {
-          animateCount(num, parseInt(num.dataset.target));
-        });
-        barObs.unobserve(e.target);
-      });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('#trajetoria').forEach(el => barObs.observe(el));
-
-    // Fade-in on scroll
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.area-card, .atend-item, .cred').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(18px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      obs.observe(el);
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const v = id => document.getElementById(id).value.trim();
+      const linhas = [
+        `Olá, Dr. Anthony. Meu nome é ${v('nome')}${v('cidade') ? ', de ' + v('cidade') : ''}.`,
+        v('area') ? `Assunto: ${v('area')}` : '',
+        '',
+        v('mensagem')
+      ].filter((l, i) => l || i === 2);
+      window.open('https://wa.me/5569993194892?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');
     });
   </script>
 </body>
