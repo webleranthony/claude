@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Abrindo o WhatsApp…</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0B1B30; color: #F2EFE9; font-family: system-ui, sans-serif; text-align: center; padding: 24px; }
+    a { color: #F2EFE9; }
+  </style>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <p>Abrindo o WhatsApp…<br /><a id="link" href="https://wa.me/5569993194892">Toque aqui se não abrir</a></p>
+  <script>
+    (function () {
+      var msgPadrao = 'Olá, Dr. Anthony! Vim pelo site e gostaria de falar sobre o meu caso.';
+      var texto = new URLSearchParams(location.search).get('text') || msgPadrao;
+      var origem = location.pathname.split('/').filter(Boolean).pop() || 'desconhecida';
+      var destino = 'https://wa.me/5569993194892?text=' + encodeURIComponent(texto);
+      document.getElementById('link').href = destino;
+      window.va('event', { name: 'WhatsApp', data: { origem: origem } });
+      var foi = false;
+      function ir() { if (!foi) { foi = true; location.replace(destino); } }
+      window.addEventListener('load', function () { setTimeout(ir, 300); });
+      setTimeout(ir, 1500);
+    })();
+  </script>
+</body>
+</html>

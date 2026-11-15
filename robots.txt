@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /wa/
+Disallow: /wa.html
+
+Sitemap: https://www.anthony.adv.br/sitemap.xml

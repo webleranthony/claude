@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/wa/:origem", "destination": "/wa.html" }
+  ],
+  "headers": [
+    {
+      "source": "/wa/:origem",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    }
+  ]
+}
