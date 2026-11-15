@@ -13,7 +13,7 @@
   <!-- Open Graph (WhatsApp, Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Dr. Anthony Henrik Webler | Advogado Previdenciário" />
-  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 914+ processos. Atendimento em todo o Brasil." />
+  <meta property="og:description" content="Especialista em ações contra o INSS e defesa do servidor público. 969+ processos. Atendimento em todo o Brasil." />
   <meta property="og:image" content="https://anthony.adv.br/foto-hero.jpeg" />
   <meta property="og:url" content="https://anthony.adv.br/" />
   <meta property="og:locale" content="pt_BR" />
@@ -21,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dr. Anthony Henrik Webler | Advogado" />
-  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 914+ processos. Atendimento em todo o Brasil." />
+  <meta name="twitter:description" content="Especialista em INSS e Servidor Público. 969+ processos. Atendimento em todo o Brasil." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -250,6 +250,69 @@
       max-width: 700px;
       margin: 0 auto 40px;
       gap: 20px;
+    }
+
+    .polo-card {
+      background: var(--bg-3);
+      border-radius: 14px;
+      padding: 32px 36px;
+      border-top: 3px solid var(--gold);
+    }
+    .polo-head { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .polo-icon {
+      width: 46px; height: 46px; border-radius: 10px; background: var(--gold-dim);
+      display: flex; align-items: center; justify-content: center; font-size: 20px;
+    }
+    .polo-head-label { font-size: 12px; color: var(--muted); }
+    .polo-head-num { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--text); line-height: 1.1; }
+    .polo-bar { display: flex; height: 12px; border-radius: 99px; overflow: hidden; gap: 3px; margin-bottom: 18px; }
+    .polo-seg { display: block; height: 100%; }
+    .polo-seg-ativo { background: #2EAD7A; flex: 0 0 1%; }
+    .polo-seg-adv { background: var(--gold); flex: 1; }
+    .polo-seg-outros { background: #8A8A8A; flex: 0 0 1%; }
+    .polo-legend { display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 20px; }
+    .polo-leg-item { display: flex; align-items: center; gap: 10px; }
+    .polo-sq { width: 14px; height: 14px; border-radius: 3px; flex: none !important; }
+    .polo-leg-item small { display: block; font-size: 12px; color: var(--muted); }
+    .polo-leg-item strong { font-size: 14px; color: var(--text); }
+    .polo-text { font-size: 14px; color: var(--muted); line-height: 1.75; }
+    .polo-text strong { color: var(--text); }
+
+    /* WhatsApp CTAs */
+    .wpp-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 200;
+      width: 60px; height: 60px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.4);
+      transition: transform var(--ease);
+      animation: wppPulse 2.4s infinite;
+    }
+    .wpp-float:hover { transform: scale(1.08); }
+    .wpp-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes wppPulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55), 0 6px 22px rgba(0,0,0,0.4); }
+      70% { box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 6px 22px rgba(0,0,0,0.4); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 6px 22px rgba(0,0,0,0.4); }
+    }
+    .wpp-cta {
+      background: linear-gradient(135deg, rgba(42,95,191,0.18), rgba(42,95,191,0.06));
+      border: 1px solid rgba(42,95,191,0.35);
+      border-radius: 14px; padding: 28px 32px; margin-top: 48px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .wpp-cta h3 { font-size: 21px; color: var(--text); margin-bottom: 4px; }
+    .wpp-cta p { font-size: 14px; color: var(--muted); }
+    .wpp-cta .wpp-btn { margin-top: 0; }
+    @media (max-width: 900px) {
+      .traj-numbers { grid-template-columns: repeat(2, 1fr); }
+      .traj-timeline { flex-wrap: wrap; row-gap: 24px; }
+      .traj-timeline::before { display: none; }
+      .traj-step { flex: 0 0 50%; }
+    }
+    @media (max-width: 600px) {
+      .wpp-cta { padding: 22px 20px; }
+      .wpp-cta .wpp-btn { width: 100%; justify-content: center; }
+      .polo-card { padding: 24px 20px; }
     }
 
     .traj-card {
@@ -680,7 +743,7 @@
       <!-- NÚMEROS PRINCIPAIS -->
       <div class="traj-numbers">
         <div class="traj-num-card">
-          <div class="traj-big-num" data-target="914">0</div>
+          <div class="traj-big-num" data-target="969">0</div>
           <div class="traj-num-label">Processos</div>
           <div class="traj-num-sub">registrados no Jusbrasil</div>
         </div>
@@ -703,20 +766,26 @@
 
       <!-- BARRAS E CLIENTES -->
       <div class="traj-grid">
-        <div class="traj-card">
-          <h3>⚖️ Distribuição por polo</h3>
-          <div class="traj-bar-wrap">
-            <div class="traj-bar-item">
-              <div class="traj-bar-top"><span>Como Advogado</span><span>&gt; 99%</span></div>
-              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="99%"></div></div>
-            </div>
-            <div class="traj-bar-item">
-              <div class="traj-bar-top"><span>Polo Ativo</span><span>&lt; 1%</span></div>
-              <div class="traj-bar-track"><div class="traj-bar-fill" style="width:0" data-width="1%"></div></div>
+        <div class="polo-card">
+          <div class="polo-head">
+            <div class="polo-icon">⚖️</div>
+            <div>
+              <div class="polo-head-label">Processos</div>
+              <div class="polo-head-num">969</div>
             </div>
           </div>
-          <p style="margin-top:20px; font-size:13px; color:var(--muted); line-height:1.7;">
-            Atuação quase exclusiva como advogado — representando clientes em ações contra o INSS, municípios e demais partes em todo o espectro do Direito Previdenciário e do Servidor Público.
+          <div class="polo-bar">
+            <span class="polo-seg polo-seg-ativo"></span>
+            <span class="polo-seg polo-seg-adv"></span>
+            <span class="polo-seg polo-seg-outros"></span>
+          </div>
+          <div class="polo-legend">
+            <div class="polo-leg-item"><span class="polo-sq polo-seg-ativo"></span><div><small>Polo ativo</small><strong>&lt; 1%</strong></div></div>
+            <div class="polo-leg-item"><span class="polo-sq polo-seg-adv"></span><div><small>Advogado</small><strong>&gt; 99%</strong></div></div>
+            <div class="polo-leg-item"><span class="polo-sq polo-seg-outros"></span><div><small>Outros</small><strong>&lt; 1%</strong></div></div>
+          </div>
+          <p class="polo-text">
+            O nome Anthony Henrik Webler aparece em <strong>969 processos</strong>, em sua grande maioria como advogado — representando clientes em ações contra o INSS e na defesa de servidores públicos.
           </p>
         </div>
       </div>
@@ -743,11 +812,18 @@
           <div class="traj-step">
             <div class="traj-step-dot">🏛️</div>
             <div class="traj-step-year">2025</div>
-            <div class="traj-step-desc">914+ processos. Pós em RPPS, Tributário, BPC e Incapacidade</div>
+            <div class="traj-step-desc">969+ processos. Pós em RPPS, Tributário, BPC e Incapacidade</div>
           </div>
         </div>
       </div>
 
+      <div class="wpp-cta">
+        <div>
+          <h3>Quer saber se você tem direito?</h3>
+          <p>A análise inicial do seu caso é gratuita e sem compromisso.</p>
+        </div>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
+      </div>
     </div>
   </section>
 
@@ -793,6 +869,13 @@
             <div class="cred">🇧🇷 Atende todo o Brasil — presencial e online</div>
           </div>
         </div>
+      </div>
+      <div class="wpp-cta">
+        <div>
+          <h3>Vamos conversar sobre o seu caso?</h3>
+          <p>Atendimento humanizado, presencial em Cacoal/RO ou online para todo o Brasil.</p>
+        </div>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -844,6 +927,13 @@
           <p>Planejamento e concessão de aposentadoria pelo regime próprio (RPPS) e revisão de benefícios já concedidos.</p>
           <span class="area-tag">Servidor Público</span>
         </div>
+      </div>
+      <div class="wpp-cta">
+        <div>
+          <h3>Teve o benefício negado ou cortado pelo INSS?</h3>
+          <p>Ou é servidor e está enfrentando um PAD? Fale agora com o Dr. Anthony.</p>
+        </div>
+        <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-btn">&#128172; Chamar no WhatsApp</a>
       </div>
     </div>
   </section>
@@ -1040,6 +1130,10 @@
       <div class="footer-copy">© 2025 · OAB/RO 10.953 · OAB/AM A2232</div>
     </div>
   </footer>
+
+  <a href="https://wa.me/5569993194892" target="_blank" rel="noopener" class="wpp-float" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.42-9.44 9.42zm8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.8.72.71 5.8.71 12.05c0 2 .52 3.95 1.51 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.08 11.34-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></svg>
+  </a>
 
   <script>
     // Nav scroll
