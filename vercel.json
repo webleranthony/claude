@@ -1,11 +1,30 @@
 {
   "rewrites": [
-    { "source": "/wa/:origem", "destination": "/wa.html" }
+    {
+      "source": "/auxilio-acidente",
+      "destination": "/auxilio-acidente.html"
+    },
+    {
+      "source": "/wa/:origem",
+      "destination": "/wa.html"
+    }
   ],
   "headers": [
     {
       "source": "/wa/:origem",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/auxilio-acidente.html",
+      "destination": "/auxilio-acidente",
+      "permanent": true
     }
   ]
 }
